@@ -1,0 +1,19 @@
+{
+  "keywords": [
+    "best web scraping api",
+    "google ai overview tracker"
+  ],
+  "targetDomains": [
+    "apify.com"
+  ],
+  "competitorDomains": [
+    "browse.ai",
+    "phantombuster.com",
+    "dataforseo.com"
+  ],
+  "locationCode": 2840,
+  "languageCode": "en",
+  "device": "desktop",
+  "includeAiOverview": true,
+  "concurrency": 1
+}
