@@ -1,0 +1,10 @@
+{
+  "businesses": [
+    "Hedonism Wines London"
+  ],
+  "locationCode": 2826,
+  "languageCode": "en",
+  "depth": 10,
+  "sortBy": "lowest_rating",
+  "concurrency": 1
+}
