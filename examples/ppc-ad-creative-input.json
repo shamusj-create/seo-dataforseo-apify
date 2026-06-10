@@ -1,0 +1,10 @@
+{
+  "targetDomains": [
+    "apify.com"
+  ],
+  "locationCode": 2840,
+  "platform": "google_search",
+  "adFormat": "all",
+  "depth": 40,
+  "concurrency": 1
+}
