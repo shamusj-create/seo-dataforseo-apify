@@ -1,0 +1,11 @@
+{
+  "keywords": [
+    "best web scraping api"
+  ],
+  "targetDomain": "apify.com",
+  "locationCode": 2840,
+  "languageCode": "en",
+  "device": "desktop",
+  "includeAiOverview": true,
+  "concurrency": 1
+}
