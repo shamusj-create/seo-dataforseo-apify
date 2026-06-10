@@ -1,0 +1,13 @@
+{
+  "name": "seo-dataforseo-apify-examples",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "description": "Public examples for SEO, AI visibility, PPC, shopping, ASO, and review-mining Actors on Apify.",
+  "scripts": {
+    "run-suite": "node examples/run-suite.js"
+  },
+  "dependencies": {
+    "apify-client": "^2.16.0"
+  }
+}
