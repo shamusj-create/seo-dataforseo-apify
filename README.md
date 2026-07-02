@@ -2,15 +2,15 @@
 
 Copy-paste Apify examples for keyword ROI scoring, Google AI Overview visibility, SERP content briefs, competitor PPC creative monitoring, Google Shopping price comparison, Google Play ASO opportunity research, and Google Reviews complaint mining.
 
-Start with a live Actor:
+Try on Apify:
 
-- [Try AI SERP Visibility Monitor](https://apify.com/changeable_peddler/ai-serp-visibility-monitor)
-- [Try Keyword ROI Scorer](https://apify.com/changeable_peddler/keyword-roi-scorer)
-- [Try SERP Content Brief Generator](https://apify.com/changeable_peddler/serp-content-brief-generator)
-- [Try PPC Ad Creative Monitor](https://apify.com/changeable_peddler/ppc-ad-creative-monitor)
-- [Try Shopping Price Gap Finder](https://apify.com/changeable_peddler/shopping-price-gap-finder)
-- [Try App Store ASO Opportunity Finder](https://apify.com/changeable_peddler/app-store-aso-opportunity-finder)
-- [Try Local Review Complaint Miner](https://apify.com/changeable_peddler/local-review-complaint-miner)
+- [AI SERP Visibility Monitor](https://apify.com/changeable_peddler/ai-serp-visibility-monitor)
+- [Keyword ROI Scorer](https://apify.com/changeable_peddler/keyword-roi-scorer)
+- [SERP Content Brief Generator](https://apify.com/changeable_peddler/serp-content-brief-generator)
+- [PPC Ad Creative Monitor](https://apify.com/changeable_peddler/ppc-ad-creative-monitor)
+- [Shopping Price Gap Finder](https://apify.com/changeable_peddler/shopping-price-gap-finder)
+- [App Store ASO Opportunity Finder](https://apify.com/changeable_peddler/app-store-aso-opportunity-finder)
+- [Local Review Complaint Miner](https://apify.com/changeable_peddler/local-review-complaint-miner)
 
 This repository is for teams that want repeatable search intelligence without building DataForSEO plumbing, result normalization, scoring logic, or dataset exports from scratch.
 
