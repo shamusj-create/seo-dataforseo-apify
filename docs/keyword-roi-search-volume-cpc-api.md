@@ -21,6 +21,8 @@ Use [examples/keyword-roi-input.json](../examples/keyword-roi-input.json):
 - A short build-or-skip recommendation.
 - Dataset rows ready for export to CSV, Sheets, or a dashboard.
 
+See a compact example row in [sample outputs and case studies](sample-outputs-and-case-studies.md#keyword-roi-scorer).
+
 ## Helpful uses
 
 - Pick landing-page targets.

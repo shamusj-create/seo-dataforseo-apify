@@ -26,6 +26,8 @@ Use [examples/ai-serp-visibility-input.json](../examples/ai-serp-visibility-inpu
 - AI Overview mention or citation evidence when available.
 - A normalized visibility summary for monitoring or reporting.
 
+See a compact example row in [sample outputs and case studies](sample-outputs-and-case-studies.md#ai-serp-visibility-monitor).
+
 ## Helpful uses
 
 - Check whether your brand appears in AI-assisted search results.

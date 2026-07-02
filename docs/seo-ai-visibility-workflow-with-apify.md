@@ -36,6 +36,8 @@ Compare your target domain against direct competitors. The useful fields are ran
 - Scores, summaries, and recommendations.
 - Competitor and SERP evidence you can export to a spreadsheet or dashboard.
 
+For compact example rows, see [sample outputs and case studies](sample-outputs-and-case-studies.md).
+
 ## When to use this
 
 Use this before writing a new landing page, refreshing a stale content asset, validating a GEO/AI-search concern, or prioritizing a backlog of SEO ideas.

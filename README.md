@@ -14,6 +14,8 @@ Try on Apify:
 
 This repository is for teams that want repeatable search intelligence without building DataForSEO plumbing, result normalization, scoring logic, or dataset exports from scratch.
 
+See the proof artifact first: [sample outputs and case studies](docs/sample-outputs-and-case-studies.md).
+
 ## Use Cases
 
 - Score keyword ideas with search volume, CPC, competition, and a build-or-skip recommendation.
@@ -27,6 +29,7 @@ This repository is for teams that want repeatable search intelligence without bu
 ## Tutorials
 
 - [How to automate SEO opportunity and AI visibility checks with Apify](docs/seo-ai-visibility-workflow-with-apify.md)
+- [Sample outputs and case studies](docs/sample-outputs-and-case-studies.md)
 - [Keyword ROI scorer and search volume CPC API](docs/keyword-roi-search-volume-cpc-api.md)
 - [Google AI Overview visibility monitor](docs/ai-overview-visibility-monitor.md)
 - [SERP content brief and People Also Ask API](docs/serp-content-brief-api.md)

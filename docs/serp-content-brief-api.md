@@ -26,6 +26,8 @@ Use [examples/serp-content-brief-input.json](../examples/serp-content-brief-inpu
 - Topic and outline suggestions grounded in live search results.
 - A dataset row that can be exported into a content workflow.
 
+See a compact example row in [sample outputs and case studies](sample-outputs-and-case-studies.md#serp-content-brief-generator).
+
 ## Helpful uses
 
 - Create a first draft content brief from live SERP evidence.
