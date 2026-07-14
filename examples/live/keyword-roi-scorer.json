@@ -1,0 +1,124 @@
+{
+    "generatedAt": "2026-07-14T12:03:38.493Z",
+    "label": "Controlled demonstration. This is product proof, not customer usage.",
+    "actor": "keyword-roi-scorer",
+    "runId": "cOadivm9ff86gmjrh",
+    "startedAt": "2026-07-04T09:56:43.186Z",
+    "status": "SUCCEEDED",
+    "datasetItemCount": 5,
+    "items": [
+        {
+            "input": "best web scraping api",
+            "status": "ANALYZED",
+            "score": 75,
+            "reportType": "keyword-roi-scorer",
+            "summary": "best web scraping api: volume 140, CPC 12.81, competition index 10.",
+            "recommendations": [
+                "Build now: strong value signal."
+            ],
+            "highlights": [
+                {
+                    "keyword": "best web scraping api",
+                    "searchVolume": 140,
+                    "cpc": 12.81,
+                    "competition": "LOW",
+                    "competitionIndex": 10
+                }
+            ],
+            "metrics": {
+                "searchVolume": 140,
+                "cpc": 12.81,
+                "competition": "LOW",
+                "competitionIndex": 10,
+                "monthlySearches": [
+                    {
+                        "year": 2026,
+                        "month": 5,
+                        "search_volume": 90
+                    },
+                    {
+                        "year": 2026,
+                        "month": 4,
+                        "search_volume": 70
+                    },
+                    {
+                        "year": 2026,
+                        "month": 3,
+                        "search_volume": 170
+                    }
+                ]
+            },
+            "checkedAt": "2026-07-04T09:56:46.618Z"
+        },
+        {
+            "input": "google ai overview tracker",
+            "status": "ANALYZED",
+            "score": 1,
+            "reportType": "keyword-roi-scorer",
+            "summary": "google ai overview tracker: volume 0, CPC 0, competition index 50.",
+            "recommendations": [
+                "Skip or keep as supporting keyword."
+            ],
+            "highlights": [
+                {
+                    "keyword": "google ai overview tracker",
+                    "searchVolume": 0,
+                    "cpc": 0,
+                    "competition": null,
+                    "competitionIndex": 50
+                }
+            ],
+            "metrics": {
+                "searchVolume": 0,
+                "cpc": 0,
+                "competition": null,
+                "competitionIndex": 50,
+                "monthlySearches": []
+            },
+            "checkedAt": "2026-07-04T09:56:46.618Z"
+        },
+        {
+            "input": "seo api",
+            "status": "ANALYZED",
+            "score": 85,
+            "reportType": "keyword-roi-scorer",
+            "summary": "seo api: volume 480, CPC 25.29, competition index 10.",
+            "recommendations": [
+                "Build now: strong value signal."
+            ],
+            "highlights": [
+                {
+                    "keyword": "seo api",
+                    "searchVolume": 480,
+                    "cpc": 25.29,
+                    "competition": "LOW",
+                    "competitionIndex": 10
+                }
+            ],
+            "metrics": {
+                "searchVolume": 480,
+                "cpc": 25.29,
+                "competition": "LOW",
+                "competitionIndex": 10,
+                "monthlySearches": [
+                    {
+                        "year": 2026,
+                        "month": 5,
+                        "search_volume": 390
+                    },
+                    {
+                        "year": 2026,
+                        "month": 4,
+                        "search_volume": 260
+                    },
+                    {
+                        "year": 2026,
+                        "month": 3,
+                        "search_volume": 320
+                    }
+                ]
+            },
+            "checkedAt": "2026-07-04T09:56:46.618Z"
+        }
+    ]
+}

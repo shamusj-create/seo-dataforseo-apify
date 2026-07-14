@@ -1,0 +1,58 @@
+{
+    "generatedAt": "2026-07-14T12:04:27.681Z",
+    "label": "Controlled demonstration. This is product proof, not customer usage.",
+    "actor": "ppc-ad-creative-monitor",
+    "runId": "6GVIvTrDhZSDAH1Si",
+    "startedAt": "2026-07-07T11:03:20.842Z",
+    "status": "SUCCEEDED",
+    "datasetItemCount": 8,
+    "items": [
+        {
+            "input": "forthepeople.com",
+            "status": "ANALYZED",
+            "score": 64,
+            "reportType": "ppc-ad-creative-monitor",
+            "summary": "forthepeople.com: found 40 ad creative(s), 1 distinct messaging angle(s).",
+            "recommendations": [
+                "Review repeated angles for landing-page and offer positioning.",
+                "Track this domain weekly to spot new ad launches."
+            ],
+            "highlights": [
+                {
+                    "advertiserId": "AR14096354794599874561",
+                    "title": "Morgan & Morgan, P.A.",
+                    "format": "text",
+                    "firstShown": "2025-06-02 15:29:58 +00:00",
+                    "lastShown": "2026-07-07 10:31:09 +00:00",
+                    "previewUrl": null
+                },
+                {
+                    "advertiserId": "AR14096354794599874561",
+                    "title": "Morgan & Morgan, P.A.",
+                    "format": "text",
+                    "firstShown": "2025-10-16 14:09:51 +00:00",
+                    "lastShown": "2026-07-07 10:28:48 +00:00",
+                    "previewUrl": null
+                },
+                {
+                    "advertiserId": "AR14096354794599874561",
+                    "title": "Morgan & Morgan, P.A.",
+                    "format": "text",
+                    "firstShown": "2022-12-01 19:01:31 +00:00",
+                    "lastShown": "2026-07-07 10:26:27 +00:00",
+                    "previewUrl": "https://displayads-formats.googleusercontent.com/ads/preview/content.js?client=ads-integrity-transparency&obfuscatedCustomerId=9858597582&creativeId=625567076140&uiFeatures=12,54&adGroupId=118631273915&versionId=22&overlay=%3DH4sIAAAAAAAAAIWSQW8bRRTHs22SmqFxEidpS0BoG1AQEjT22rEJqFJdexM7sZ2JncYJEkzGs7PrsXdn1jOztlPEBYkL3PoRkPgQwJU7SEj9Epzg6BOyY6xIIOU0837vPf3_T-8d_gXAA-w4TDPBsd-gWJJ23ilijROvwdYf4FXsNwB-AeDnhcRyVUgPc3PbvP7UV8Bi7M7K3KO5xPh9-OizCbk7JXdnZH5K5mdkYUoWZmRxShZn5N6U3JsRY0qMMfnb-MkAH4CH-zhg_tXHYsCpY26bIqQSa-ps3XcnCTRJgG2wui8pNYngKvI1Ho-7tepKStFNBN4FS5M6W2kWYE23liY1dBqC98FGnhAaasY9k9OBSXxGuVZbb3I6QNMAmCDeCCnuKrMRYs5UeyuuJjFS1_HIiONIC4QJYc64ZWSsthi5Ij69yTYI1lhpKcI2I4jxTiQZVSMjPvZMuUZMqWgMVhyGPS4UU4hKKaQaGe85EZu1oJBKNV7wNblCPh5cUTkyEgF1GME-4tTzmUc5oSNjPRBayP-4iYeYcaQi16WScW9krIfUoUpLhvnNunf-XwwJ3R5LvqF8FiIX-_7IWNGSYh2MR_nX91sRZ1xFkjpoYoMpjYiPWaBGxuOBkF0qFSIiCClXk50hH7eEnE0UH0jBPTfykUOxbv9-59flRBzcj_0QX52bm7t03cSzzT_nYwbcgG9DH3bhPEzAHLTgGlyHAfzRgB3IoA2fQReW4GO4GRrfGN_Pg6_BV22tQ_Xpzo7fTj_xhPB8GikqieCacv2EiGCnztvqpJ_8pHXeeN5A-3Wuavlc54RQCqvn-aYb1PtujTStZi0q1Pa8vbOUlUyGp9kmPW1deE9dIkWYzTxNfZTZzVjJbA5jh6RIMpMECHxxu3zhInfAeikvHPbz3mldVNjLwVD0Dg_dk96R1Tg-6KZyR7AS1LyqXfZ6tdC2T9zKackKBWiBy9sFXhbDoRsdkn3hdu2g76dZIZBlco6SlXIqK5FuQZWCvUap2niR0hfHXvG86IWwRSQK-Am4BF_ernHm9A7sAi09t8odJzyE6XpQwHUJm6XoqlCmupWVVSdTzkSOatkdvkutpttDSavC-h1AAL5doSQv7G624bnZ_exumG73ZdGxXhyd1SD6HDvDyl66I1EQtKtDX_atQZ7lu7ksOrbSSX-3uZf5zliL3UksHxwfH1Rss1Go23bNLr4yHsDp3Zvlyd2blclJbi6DJeNbY6fC19hw0P8w9g-B4xDzdAUAAA&sig=ACiVB_xTuO23b9bEAcpsStvo8CqwJFdPhw&htmlParentId=fletch-render-5443893106955286474&responseCallback=fletchCallback5443893106955286474"
+                }
+            ],
+            "metrics": {
+                "creativeCount": 40,
+                "textAds": 39,
+                "imageAds": 1,
+                "videoAds": 0,
+                "activeAngles": [
+                    "Morgan & Morgan, P.A."
+                ]
+            },
+            "checkedAt": "2026-07-07T11:03:25.277Z"
+        }
+    ]
+}

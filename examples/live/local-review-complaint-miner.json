@@ -1,0 +1,59 @@
+{
+    "generatedAt": "2026-07-14T12:03:38.486Z",
+    "label": "Controlled demonstration. This is product proof, not customer usage.",
+    "actor": "local-review-complaint-miner",
+    "runId": "4sfWAiJsHDnWkl6Td",
+    "startedAt": "2026-07-14T12:02:38.807Z",
+    "status": "SUCCEEDED",
+    "datasetItemCount": 1,
+    "items": [
+        {
+            "input": "Hedonism Wines London",
+            "status": "ANALYZED",
+            "score": 100,
+            "reportType": "local-review-complaint-miner",
+            "summary": "Hedonism Wines London: 10 complaint-like review(s) found out of 10.",
+            "recommendations": [
+                "Use the top complaint themes for reputation outreach or competitor displacement messaging.",
+                "Review the low-star examples before contacting the business."
+            ],
+            "highlights": [
+                {
+                    "rating": 1,
+                    "text": "Was really disappointed by the experience here, staff had zero engagement not even bothering to offer a hello. Wanted to by some nice wine ended up shopping elsewhere",
+                    "date": "2026-05-03 15:21:01 +00:00"
+                },
+                {
+                    "rating": 1,
+                    "text": "I’d like to share a very disappointing customer experience I had today at Hedonism Wines. I previously visited in September with a friend from France who recommended a charming French chestnut liqueur that her grandparen",
+                    "date": "2025-04-16 17:15:56 +00:00"
+                },
+                {
+                    "rating": 1,
+                    "text": "Nice shop which is full of great wines. Went in to buy a bottle of wine on the way home from a weekend stay & just had one of the staff following me and my wife every where we went. They did not ask if we needed help the",
+                    "date": "2024-04-12 13:55:33 +00:00"
+                }
+            ],
+            "metrics": {
+                "reviewsCount": 1490,
+                "sampledReviews": 10,
+                "complaintCount": 10,
+                "themes": [
+                    {
+                        "term": "poor",
+                        "count": 3
+                    },
+                    {
+                        "term": "overpriced",
+                        "count": 3
+                    },
+                    {
+                        "term": "late",
+                        "count": 2
+                    }
+                ]
+            },
+            "checkedAt": "2026-07-14T12:02:41.308Z"
+        }
+    ]
+}

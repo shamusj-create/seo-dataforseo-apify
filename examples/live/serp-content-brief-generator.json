@@ -1,0 +1,54 @@
+{
+    "generatedAt": "2026-07-14T12:03:38.430Z",
+    "label": "Controlled demonstration. This is product proof, not customer usage.",
+    "actor": "serp-content-brief-generator",
+    "runId": "EfaIdAD4tfkrl6kJu",
+    "startedAt": "2026-07-14T12:02:38.776Z",
+    "status": "SUCCEEDED",
+    "datasetItemCount": 1,
+    "items": [
+        {
+            "input": "best web scraping api",
+            "status": "ANALYZED",
+            "score": 55,
+            "reportType": "serp-content-brief-generator",
+            "summary": "Brief built from 9 organic results, 0 PAA items, AI Overview present.",
+            "recommendations": [
+                "Create a dedicated page for this query intent and use the outline as the first draft."
+            ],
+            "highlights": [
+                {
+                    "rank": 2,
+                    "title": "16 Best Web Scraping APIs of 2026 (In-Depth Review)",
+                    "domain": "scrape.do",
+                    "url": "https://scrape.do/blog/best-web-scraping-api/"
+                },
+                {
+                    "rank": 3,
+                    "title": "Best web scraping api's at the moment? : r/webscraping",
+                    "domain": "reddit.com",
+                    "url": "https://www.reddit.com/r/webscraping/comments/1016j3l/best_web_scraping_apis_at_the_moment/"
+                },
+                {
+                    "rank": 4,
+                    "title": "ScrapingBee – The Best Web Scraping API",
+                    "domain": "scrapingbee.com",
+                    "url": "https://www.scrapingbee.com/"
+                }
+            ],
+            "metrics": {
+                "organicCount": 9,
+                "peopleAlsoAskCount": 0,
+                "relatedSearchCount": 8,
+                "aiOverviewPresent": true,
+                "targetFound": false,
+                "outline": [
+                    "Define the search intent in the opening paragraph.",
+                    "Cover angle: 16 Best Web Scraping APIs of 2026 (In-Depth Review)",
+                    "Cover angle: Best web scraping api's at the moment? : r/webscraping"
+                ]
+            },
+            "checkedAt": "2026-07-14T12:02:41.681Z"
+        }
+    ]
+}

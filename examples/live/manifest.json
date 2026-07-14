@@ -1,0 +1,41 @@
+{
+    "generatedAt": "2026-07-14",
+    "label": "Controlled demonstrations. These artifacts prove output shape and successful execution; they are not customer usage.",
+    "actors": [
+        {
+            "actor": "ai-serp-visibility-monitor",
+            "runId": "ny9T0gyR4nfJMRcOA",
+            "artifact": "ai-serp-visibility-monitor.json"
+        },
+        {
+            "actor": "keyword-roi-scorer",
+            "runId": "cOadivm9ff86gmjrh",
+            "artifact": "keyword-roi-scorer.json"
+        },
+        {
+            "actor": "serp-content-brief-generator",
+            "runId": "EfaIdAD4tfkrl6kJu",
+            "artifact": "serp-content-brief-generator.json"
+        },
+        {
+            "actor": "ppc-ad-creative-monitor",
+            "runId": "6GVIvTrDhZSDAH1Si",
+            "artifact": "ppc-ad-creative-monitor.json"
+        },
+        {
+            "actor": "shopping-price-gap-finder",
+            "runId": "MhV3XEcU2hbPznU1J",
+            "artifact": "shopping-price-gap-finder.json"
+        },
+        {
+            "actor": "app-store-aso-opportunity-finder",
+            "runId": "RemeVXE8CTbMheOV9",
+            "artifact": "app-store-aso-opportunity-finder.json"
+        },
+        {
+            "actor": "local-review-complaint-miner",
+            "runId": "4sfWAiJsHDnWkl6Td",
+            "artifact": "local-review-complaint-miner.json"
+        }
+    ]
+}

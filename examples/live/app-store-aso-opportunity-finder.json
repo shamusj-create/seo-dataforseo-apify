@@ -1,0 +1,158 @@
+{
+    "generatedAt": "2026-07-14T12:03:38.550Z",
+    "label": "Controlled demonstration. This is product proof, not customer usage.",
+    "actor": "app-store-aso-opportunity-finder",
+    "runId": "RemeVXE8CTbMheOV9",
+    "startedAt": "2026-07-07T11:06:00.305Z",
+    "status": "SUCCEEDED",
+    "datasetItemCount": 10,
+    "items": [
+        {
+            "input": "fitness tracker",
+            "status": "ANALYZED",
+            "score": 61,
+            "reportType": "app-store-aso-opportunity-finder",
+            "summary": "fitness tracker: 10 top apps, avg rating 4.31, median reviews 0.",
+            "recommendations": [
+                "Promising ASO gap: top results show room for a better-rated or better-positioned app."
+            ],
+            "highlights": [
+                {
+                    "rank": 1,
+                    "appId": "com.google.android.apps.fitness",
+                    "title": "Google Fit: Activity Tracking",
+                    "developer": "Google LLC",
+                    "rating": 3.4,
+                    "reviewsCount": null,
+                    "isFree": true,
+                    "url": "https://play.google.com/store/apps/details?id=com.google.android.apps.fitness"
+                },
+                {
+                    "rank": 2,
+                    "appId": "com.myfitnesspal.android",
+                    "title": "MyFitnessPal: Calorie Counter",
+                    "developer": "MyFitnessPal, Inc.",
+                    "rating": 4.4,
+                    "reviewsCount": null,
+                    "isFree": true,
+                    "url": "https://play.google.com/store/apps/details?id=com.myfitnesspal.android"
+                },
+                {
+                    "rank": 3,
+                    "appId": "com.mapmyfitness.android2",
+                    "title": "Map My Fitness Workout Tracker",
+                    "developer": "MapMyFitness, Inc.",
+                    "rating": 4.7,
+                    "reviewsCount": null,
+                    "isFree": true,
+                    "url": "https://play.google.com/store/apps/details?id=com.mapmyfitness.android2"
+                }
+            ],
+            "metrics": {
+                "appsCount": 30,
+                "averageTopRating": 4.31,
+                "medianTopReviews": 0,
+                "developerCount": 9
+            },
+            "checkedAt": "2026-07-07T11:06:02.352Z"
+        },
+        {
+            "input": "workout planner",
+            "status": "ANALYZED",
+            "score": 57,
+            "reportType": "app-store-aso-opportunity-finder",
+            "summary": "workout planner: 10 top apps, avg rating 4.66, median reviews 0.",
+            "recommendations": [
+                "Competitive keyword: use it as supporting metadata or find longer-tail variants."
+            ],
+            "highlights": [
+                {
+                    "rank": 1,
+                    "appId": "com.hevy",
+                    "title": "Hevy - Gym Log Workout Tracker",
+                    "developer": "Hevy Gym Workout Tracker",
+                    "rating": 4.8,
+                    "reviewsCount": null,
+                    "isFree": true,
+                    "url": "https://play.google.com/store/apps/details?id=com.hevy"
+                },
+                {
+                    "rank": 2,
+                    "appId": "homeworkout.homeworkouts.noequipment",
+                    "title": "Home Workout - No Equipment",
+                    "developer": "Leap Fitness Group",
+                    "rating": 4.9,
+                    "reviewsCount": null,
+                    "isFree": true,
+                    "url": "https://play.google.com/store/apps/details?id=homeworkout.homeworkouts.noequipment"
+                },
+                {
+                    "rank": 3,
+                    "appId": "com.myworkoutplan.myworkoutplan",
+                    "title": "My Workout Plan - Gym Tracker",
+                    "developer": "MyWorkoutPlan LLC",
+                    "rating": 4.8,
+                    "reviewsCount": null,
+                    "isFree": true,
+                    "url": "https://play.google.com/store/apps/details?id=com.myworkoutplan.myworkoutplan"
+                }
+            ],
+            "metrics": {
+                "appsCount": 16,
+                "averageTopRating": 4.66,
+                "medianTopReviews": 0,
+                "developerCount": 10
+            },
+            "checkedAt": "2026-07-07T11:06:05.095Z"
+        },
+        {
+            "input": "calorie counter",
+            "status": "ANALYZED",
+            "score": 59,
+            "reportType": "app-store-aso-opportunity-finder",
+            "summary": "calorie counter: 10 top apps, avg rating 4.52, median reviews 0.",
+            "recommendations": [
+                "Competitive keyword: use it as supporting metadata or find longer-tail variants."
+            ],
+            "highlights": [
+                {
+                    "rank": 1,
+                    "appId": "com.fourtechnologies.mynetdiary.ad",
+                    "title": "Calorie Counter - MyNetDiary",
+                    "developer": "MyNetDiary.com",
+                    "rating": 4.7,
+                    "reviewsCount": null,
+                    "isFree": true,
+                    "url": "https://play.google.com/store/apps/details?id=com.fourtechnologies.mynetdiary.ad"
+                },
+                {
+                    "rank": 2,
+                    "appId": "com.myfitnesspal.android",
+                    "title": "MyFitnessPal: Calorie Counter",
+                    "developer": "MyFitnessPal, Inc.",
+                    "rating": 4.4,
+                    "reviewsCount": null,
+                    "isFree": true,
+                    "url": "https://play.google.com/store/apps/details?id=com.myfitnesspal.android"
+                },
+                {
+                    "rank": 3,
+                    "appId": "com.fitnow.loseit",
+                    "title": "Calorie Counter by Lose It!",
+                    "developer": "FitNow, Inc.",
+                    "rating": 4.6,
+                    "reviewsCount": null,
+                    "isFree": true,
+                    "url": "https://play.google.com/store/apps/details?id=com.fitnow.loseit"
+                }
+            ],
+            "metrics": {
+                "appsCount": 24,
+                "averageTopRating": 4.52,
+                "medianTopReviews": 0,
+                "developerCount": 10
+            },
+            "checkedAt": "2026-07-07T11:06:12.877Z"
+        }
+    ]
+}

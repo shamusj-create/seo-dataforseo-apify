@@ -14,7 +14,14 @@ Try on Apify:
 
 This repository is for teams that want repeatable search intelligence without building DataForSEO plumbing, result normalization, scoring logic, or dataset exports from scratch.
 
-See the proof artifact first: [sample outputs and case studies](docs/sample-outputs-and-case-studies.md).
+See the proof first: [seven controlled live-run artifacts](examples/live/manifest.json) and [sample outputs and case studies](docs/sample-outputs-and-case-studies.md). Controlled demonstrations show successful execution and output shape; they are not customer usage.
+
+Run one bounded example:
+
+```bash
+npm install
+APIFY_TOKEN=your_token_here npm run run-suite -- --actor serp-content-brief-generator
+```
 
 ## Use Cases
 
@@ -46,6 +53,16 @@ See the proof artifact first: [sample outputs and case studies](docs/sample-outp
 - [Google Play ASO input](examples/app-store-aso-input.json)
 - [Google Reviews complaint input](examples/local-review-complaint-input.json)
 
+## Controlled Live Outputs
+
+- [AI SERP visibility](examples/live/ai-serp-visibility-monitor.json)
+- [Keyword ROI](examples/live/keyword-roi-scorer.json)
+- [SERP content brief](examples/live/serp-content-brief-generator.json)
+- [PPC ad creative](examples/live/ppc-ad-creative-monitor.json)
+- [Google Shopping price gap](examples/live/shopping-price-gap-finder.json)
+- [Google Play ASO](examples/live/app-store-aso-opportunity-finder.json)
+- [Google Reviews complaints](examples/live/local-review-complaint-miner.json)
+
 ## JavaScript Example
 
 Install dependencies:
@@ -58,6 +75,13 @@ Run the suite:
 
 ```bash
 APIFY_TOKEN=your_token_here npm run run-suite
+```
+
+List or run one Actor:
+
+```bash
+npm run run-suite -- --list
+APIFY_TOKEN=your_token_here npm run run-suite -- --actor local-review-complaint-miner
 ```
 
 The script in [examples/run-suite.js](examples/run-suite.js) runs one bounded example per Actor and prints the first dataset row from each run.

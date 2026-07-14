@@ -1,0 +1,143 @@
+{
+    "generatedAt": "2026-07-14T12:03:38.583Z",
+    "label": "Controlled demonstration. This is product proof, not customer usage.",
+    "actor": "shopping-price-gap-finder",
+    "runId": "MhV3XEcU2hbPznU1J",
+    "startedAt": "2026-07-07T11:07:12.838Z",
+    "status": "SUCCEEDED",
+    "datasetItemCount": 20,
+    "items": [
+        {
+            "input": "sony wh-1000xm5 headphones",
+            "status": "ANALYZED",
+            "score": 100,
+            "reportType": "shopping-price-gap-finder",
+            "summary": "sony wh-1000xm5 headphones: 40 priced offer(s), spread 427.72, 29 seller(s).",
+            "recommendations": [
+                "Use lowest-price sellers as price benchmark.",
+                "Investigate high-spread products for margin or repricing opportunities."
+            ],
+            "highlights": [
+                {
+                    "title": "Wireless Headphones Sony Soundbar Alexa Sony WH-1000XM5 Noise-Canceling Wireless Over-Ear Headphones (Silver)",
+                    "seller": "mountainlifestyle.ca",
+                    "url": null,
+                    "price": 27,
+                    "currency": "USD"
+                },
+                {
+                    "title": "Wh 1000xm5 Sony Bluetooth Amazon Sony WH-1000XM5 Blue",
+                    "seller": "mountainlifestyle.ca",
+                    "url": null,
+                    "price": 30,
+                    "currency": "USD"
+                },
+                {
+                    "title": "Wh 1000xm5 Sony Wind Noise Reduction Buy Online Sony Wireless Noise Canceling Stereo Headset WH-1000XM5",
+                    "seller": "mountainlifestyle.ca",
+                    "url": null,
+                    "price": 45,
+                    "currency": "USD"
+                }
+            ],
+            "metrics": {
+                "offerCount": 40,
+                "sellerCount": 29,
+                "minPrice": 27,
+                "maxPrice": 454.72,
+                "averagePrice": 241.3095,
+                "spread": 427.72,
+                "currency": "USD"
+            },
+            "checkedAt": "2026-07-07T11:07:15.315Z"
+        },
+        {
+            "input": "apple airpods pro 2",
+            "status": "ANALYZED",
+            "score": 100,
+            "reportType": "shopping-price-gap-finder",
+            "summary": "apple airpods pro 2: 40 priced offer(s), spread 966.25, 12 seller(s).",
+            "recommendations": [
+                "Use lowest-price sellers as price benchmark.",
+                "Investigate high-spread products for margin or repricing opportunities."
+            ],
+            "highlights": [
+                {
+                    "title": "Apple Airpods Pro 2 (2nd Gen) - Right, Left Or Charging Case - For",
+                    "seller": "eBay - cellphonedynasty",
+                    "url": null,
+                    "price": 32.75,
+                    "currency": "USD"
+                },
+                {
+                    "title": "2nd Gen Latest Airpods Pro Version AirPods Pro (2nd Gen) USB-C Review! Worth The Upgrade?",
+                    "seller": "mountainlifestyle.ca",
+                    "url": null,
+                    "price": 33,
+                    "currency": "USD"
+                },
+                {
+                    "title": "Airpods Pro 2nd Generation Charging 2nd Gen Air Apple Airpods Apple Airpods Pro (2nd Generation) With",
+                    "seller": "mountainlifestyle.ca",
+                    "url": null,
+                    "price": 35,
+                    "currency": "USD"
+                }
+            ],
+            "metrics": {
+                "offerCount": 40,
+                "sellerCount": 12,
+                "minPrice": 32.75,
+                "maxPrice": 999,
+                "averagePrice": 119.7265,
+                "spread": 966.25,
+                "currency": "USD"
+            },
+            "checkedAt": "2026-07-07T11:07:23.430Z"
+        },
+        {
+            "input": "bose quietcomfort ultra headphones",
+            "status": "ANALYZED",
+            "score": 100,
+            "reportType": "shopping-price-gap-finder",
+            "summary": "bose quietcomfort ultra headphones: 40 priced offer(s), spread 503, 27 seller(s).",
+            "recommendations": [
+                "Use lowest-price sellers as price benchmark.",
+                "Investigate high-spread products for margin or repricing opportunities."
+            ],
+            "highlights": [
+                {
+                    "title": "Bluetooth Headphones Bose Qc Amazon Bose QuietComfort Ultra Headphones Review: Sony Has Serious",
+                    "seller": "mountainlifestyle.ca",
+                    "url": null,
+                    "price": 31,
+                    "currency": "USD"
+                },
+                {
+                    "title": "Acoustic Noise Bose Qc Amazon Bose QuietComfort Ultra True Wireless Noise Cancelling In Ear",
+                    "seller": "mountainlifestyle.ca",
+                    "url": null,
+                    "price": 36,
+                    "currency": "USD"
+                },
+                {
+                    "title": "Ultra Earbuds Bose Quiet Comfort Earphones Bose QuietComfort Ultra Active Noise Cancelling True Wireless",
+                    "seller": "mountainlifestyle.ca",
+                    "url": null,
+                    "price": 41,
+                    "currency": "USD"
+                }
+            ],
+            "metrics": {
+                "offerCount": 40,
+                "sellerCount": 27,
+                "minPrice": 31,
+                "maxPrice": 534,
+                "averagePrice": 248.2205,
+                "spread": 503,
+                "currency": "USD"
+            },
+            "checkedAt": "2026-07-07T11:07:36.664Z"
+        }
+    ]
+}

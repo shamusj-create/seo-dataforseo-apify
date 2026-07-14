@@ -4,6 +4,10 @@ These shortened examples show the dataset shape a buyer gets back from the SEO a
 
 The values below are illustrative demo values for showing output structure. Use live Actor runs for current SERP, keyword, and visibility evidence.
 
+## Controlled live-run proof
+
+The [live-proof manifest](../examples/live/manifest.json) links to sanitized outputs from successful controlled runs for all seven Actors in this suite. These artifacts demonstrate execution and output shape; they do not represent customer usage or performance claims.
+
 ## Case study: content opportunity workflow
 
 A growth or content team can run the suite in sequence:

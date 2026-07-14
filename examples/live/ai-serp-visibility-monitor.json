@@ -1,0 +1,29 @@
+{
+    "generatedAt": "2026-07-14T12:03:38.473Z",
+    "label": "Controlled demonstration. This is product proof, not customer usage.",
+    "actor": "ai-serp-visibility-monitor",
+    "runId": "ny9T0gyR4nfJMRcOA",
+    "startedAt": "2026-07-07T11:01:16.471Z",
+    "status": "SUCCEEDED",
+    "datasetItemCount": 25,
+    "items": [
+        {
+            "keyword": "best personal injury lawyer near me",
+            "status": "ANALYZED",
+            "summary": "no target top-10 ranking; no tracked competitor top-10 ranking; AI Overview not present; 0 target domain(s) and 0 competitor domain(s) found.",
+            "checkedAt": "2026-07-07T11:01:19.324Z"
+        },
+        {
+            "keyword": "car accident lawyer consultation",
+            "status": "ANALYZED",
+            "summary": "no target top-10 ranking; no tracked competitor top-10 ranking; AI Overview not present; 0 target domain(s) and 0 competitor domain(s) found.",
+            "checkedAt": "2026-07-07T11:01:22.770Z"
+        },
+        {
+            "keyword": "how to choose a personal injury lawyer",
+            "status": "ANALYZED",
+            "summary": "no target top-10 ranking; no tracked competitor top-10 ranking; AI Overview present; target not mentioned; 0 target domain(s) and 0 competitor domain(s) found.",
+            "checkedAt": "2026-07-07T11:01:24.044Z"
+        }
+    ]
+}
