@@ -6,7 +6,7 @@ The values below are illustrative demo values for showing output structure. Use 
 
 ## Controlled live-run proof
 
-The [live-proof manifest](../examples/live/manifest.json) links to sanitized outputs from successful controlled runs for all seven Actors in this suite. These artifacts demonstrate execution and output shape; they do not represent customer usage or performance claims.
+The [live-proof manifest](../examples/live/manifest.json) links to sanitized outputs from successful controlled runs for all nine Actors in this suite. These artifacts demonstrate execution and output shape; they do not represent customer usage or performance claims.
 
 ## Case study: content opportunity workflow
 
@@ -15,6 +15,8 @@ A growth or content team can run the suite in sequence:
 - Score a shortlist with Keyword ROI Scorer.
 - Turn the strongest query into a SERP Content Brief.
 - Track target-domain and competitor visibility with AI SERP Visibility Monitor.
+- Check topic-level AI-search brand and citation evidence with LLM Brand Mentions Monitor.
+- Find competitor-only referring domains with Backlink Gap Audit Report.
 - Add PPC, Shopping, ASO, or review-mining Actors when the research question expands beyond organic search.
 
 The shared fields make the output easy to combine: `input`, `status`, `score`, `summary`, `recommendations`, `highlights`, and `metrics`.
@@ -132,6 +134,78 @@ Use this when the buyer wants to track owned and competitor visibility in organi
 ```
 
 Try it on Apify: [AI SERP Visibility Monitor](https://apify.com/changeable_peddler/ai-serp-visibility-monitor).
+
+## LLM Brand Mentions Monitor
+
+Use this when the buyer wants topic-level brand, competitor, and citation evidence from AI-search answers.
+
+```json
+{
+  "input": "web scraping api",
+  "reportType": "llm-brand-mentions-monitor",
+  "status": "ANALYZED",
+  "score": 68,
+  "summary": "web scraping api on google: target visible in 2/6 row(s); competitors visible in 4/6.",
+  "recommendations": [
+    "Preserve cited pages and keep factual claims, comparison language, and entity descriptions stable.",
+    "Review competitor-cited pages and add clearer comparison, statistics, integrations, and proof points on target pages."
+  ],
+  "highlights": [
+    {
+      "question": "What are the best web scraping APIs for developers?",
+      "platform": "google",
+      "targetMentioned": true,
+      "targetCited": true,
+      "competitorsMentioned": ["zyte.com"],
+      "sourceDomains": ["apify.com", "zyte.com", "dataforseo.com"]
+    }
+  ],
+  "metrics": {
+    "targetMentions": 2,
+    "competitorMentions": 4,
+    "citationDomains": ["apify.com", "zyte.com", "brightdata.com", "dataforseo.com"]
+  }
+}
+```
+
+Try it on Apify: [LLM Brand Mentions Monitor](https://apify.com/changeable_peddler/llm-brand-mentions-monitor).
+
+## Backlink Gap Audit Report
+
+Use this when the buyer wants competitor-only referring domains for SEO authority planning and outreach triage.
+
+```json
+{
+  "input": "apify.com",
+  "reportType": "backlink-gap-audit-report",
+  "status": "ANALYZED",
+  "score": 72,
+  "summary": "apify.com: found 25 competitor-only referring domain(s), average rank 47.8.",
+  "recommendations": [
+    "Prioritize outreach or digital PR review for the top gap domains: example-dev-news.com, automation-directory.example, data-tools-review.example.",
+    "Export the dataset and tag each gap domain as editorial, directory, partner, listicle, or low-quality before outreach."
+  ],
+  "highlights": [
+    {
+      "domain": "example-dev-news.com",
+      "rank": 61,
+      "backlinks": 43,
+      "referringPages": 18,
+      "linkedTargets": [
+        { "target": "scrapingbee.com", "backlinks": 24 },
+        { "target": "zyte.com", "backlinks": 19 }
+      ]
+    }
+  ],
+  "metrics": {
+    "gapDomainCount": 25,
+    "averageRank": 47.8,
+    "totalBacklinks": 214
+  }
+}
+```
+
+Try it on Apify: [Backlink Gap Audit Report](https://apify.com/changeable_peddler/backlink-gap-audit-report).
 
 ## Export pattern
 

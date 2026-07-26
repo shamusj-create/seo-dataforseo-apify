@@ -18,6 +18,14 @@ const examples = [
         inputFile: 'ai-serp-visibility-input.json',
     },
     {
+        actorId: 'changeable_peddler/llm-brand-mentions-monitor',
+        inputFile: 'llm-brand-mentions-input.json',
+    },
+    {
+        actorId: 'changeable_peddler/backlink-gap-audit-report',
+        inputFile: 'backlink-gap-input.json',
+    },
+    {
         actorId: 'changeable_peddler/ppc-ad-creative-monitor',
         inputFile: 'ppc-ad-creative-input.json',
     },

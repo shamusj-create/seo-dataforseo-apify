@@ -1,0 +1,78 @@
+{
+    "generatedAt": "2026-07-26T19:25:22Z",
+    "label": "Controlled demonstration. This is product proof, not customer usage.",
+    "actor": "backlink-gap-audit-report",
+    "runId": "sanitized-controlled-demo",
+    "status": "SUCCEEDED",
+    "datasetItemCount": 1,
+    "items": [
+        {
+            "input": "apify.com",
+            "status": "ANALYZED",
+            "score": 72,
+            "reportType": "backlink-gap-audit-report",
+            "summary": "apify.com: found 25 competitor-only referring domain(s), average rank 47.8.",
+            "recommendations": [
+                "Prioritize outreach or digital PR review for the top gap domains: example-dev-news.com, automation-directory.example, data-tools-review.example.",
+                "Check whether apify.com has link-worthy comparison, guide, research, or integration pages that match these referring domains.",
+                "Export the dataset and tag each gap domain as editorial, directory, partner, listicle, or low-quality before outreach."
+            ],
+            "highlights": [
+                {
+                    "domain": "example-dev-news.com",
+                    "rank": 61,
+                    "backlinks": 43,
+                    "referringPages": 18,
+                    "firstSeen": "2026-03-16",
+                    "lastSeen": "2026-07-20",
+                    "linkedTargets": [
+                        {
+                            "targetIndex": "1",
+                            "target": "scrapingbee.com",
+                            "rank": 58,
+                            "backlinks": 24,
+                            "referringPages": 9
+                        },
+                        {
+                            "targetIndex": "2",
+                            "target": "zyte.com",
+                            "rank": 65,
+                            "backlinks": 19,
+                            "referringPages": 9
+                        }
+                    ]
+                },
+                {
+                    "domain": "automation-directory.example",
+                    "rank": 44,
+                    "backlinks": 21,
+                    "referringPages": 7,
+                    "firstSeen": "2026-04-02",
+                    "lastSeen": "2026-07-22",
+                    "linkedTargets": [
+                        {
+                            "targetIndex": "3",
+                            "target": "brightdata.com",
+                            "rank": 44,
+                            "backlinks": 21,
+                            "referringPages": 7
+                        }
+                    ]
+                }
+            ],
+            "metrics": {
+                "targetDomain": "apify.com",
+                "competitorDomains": [
+                    "scrapingbee.com",
+                    "zyte.com",
+                    "brightdata.com"
+                ],
+                "gapDomainCount": 25,
+                "totalAvailable": 25,
+                "averageRank": 47.8,
+                "totalBacklinks": 214
+            },
+            "checkedAt": "2026-07-26T19:25:22Z"
+        }
+    ]
+}

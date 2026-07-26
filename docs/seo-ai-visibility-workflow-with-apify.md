@@ -5,12 +5,16 @@ This workflow connects three buyer questions:
 1. Which keywords are worth targeting?
 2. What should we write or improve?
 3. Are we visible in organic results and Google AI Overviews?
+4. Are we mentioned and cited in AI-search answers?
+5. Which referring-domain gaps can support authority work?
 
 ## Actors
 
 - [Keyword ROI Scorer](https://apify.com/changeable_peddler/keyword-roi-scorer) scores search volume, CPC, competition, and priority.
 - [SERP Content Brief Generator](https://apify.com/changeable_peddler/serp-content-brief-generator) turns live SERP evidence into a content brief.
 - [AI SERP Visibility Monitor](https://apify.com/changeable_peddler/ai-serp-visibility-monitor) tracks owned and competitor visibility across rankings and AI Overview citations.
+- [LLM Brand Mentions Monitor](https://apify.com/changeable_peddler/llm-brand-mentions-monitor) tracks topic-level brand, competitor, and citation evidence in AI-search answers.
+- [Backlink Gap Audit Report](https://apify.com/changeable_peddler/backlink-gap-audit-report) finds competitor-only referring domains for authority planning.
 
 ## Step 1: Score keywords
 
@@ -30,11 +34,23 @@ Use [examples/ai-serp-visibility-input.json](../examples/ai-serp-visibility-inpu
 
 Compare your target domain against direct competitors. The useful fields are ranking presence, AI Overview mentions, citation evidence, and competitor domains that appear where you do not.
 
+## Step 4: Track LLM brand mentions
+
+Use [examples/llm-brand-mentions-input.json](../examples/llm-brand-mentions-input.json) with the LLM Brand Mentions Monitor.
+
+Review `targetMentions`, `competitorMentions`, and `citationDomains` to see whether the target is being associated with the topic and which source domains influence the answer set.
+
+## Step 5: Find backlink gaps
+
+Use [examples/backlink-gap-input.json](../examples/backlink-gap-input.json) with the Backlink Gap Audit Report.
+
+Start with direct competitors from the SERP or AI visibility output. The returned `highlights` and `items` make a first outreach or authority audit queue.
+
 ## What you get back
 
 - Dataset rows for each keyword.
 - Scores, summaries, and recommendations.
-- Competitor and SERP evidence you can export to a spreadsheet or dashboard.
+- Competitor, citation, backlink, and SERP evidence you can export to a spreadsheet or dashboard.
 
 For compact example rows, see [sample outputs and case studies](sample-outputs-and-case-studies.md).
 

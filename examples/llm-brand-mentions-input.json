@@ -1,0 +1,18 @@
+{
+  "brandName": "Apify",
+  "targetDomain": "apify.com",
+  "topics": [
+    "web scraping api",
+    "google ai overview tracker"
+  ],
+  "competitorDomains": [
+    "zyte.com",
+    "brightdata.com"
+  ],
+  "platforms": [
+    "google"
+  ],
+  "locationCode": 2840,
+  "languageCode": "en",
+  "limit": 10
+}

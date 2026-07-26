@@ -1,0 +1,114 @@
+{
+    "generatedAt": "2026-07-26T19:25:22Z",
+    "label": "Controlled demonstration. This is product proof, not customer usage.",
+    "actor": "llm-brand-mentions-monitor",
+    "runId": "sanitized-controlled-demo",
+    "status": "SUCCEEDED",
+    "datasetItemCount": 2,
+    "items": [
+        {
+            "input": "web scraping api",
+            "status": "ANALYZED",
+            "score": 68,
+            "reportType": "llm-brand-mentions-monitor",
+            "summary": "web scraping api on google: target visible in 2/6 row(s); competitors visible in 4/6.",
+            "recommendations": [
+                "Preserve cited pages and keep factual claims, comparison language, and entity descriptions stable.",
+                "Review competitor-cited pages and add clearer comparison, statistics, integrations, and proof points on target pages.",
+                "Use recurring citation domains as a PR, partner, or source-inclusion list."
+            ],
+            "highlights": [
+                {
+                    "question": "What are the best web scraping APIs for developers?",
+                    "platform": "google",
+                    "modelName": "ai_overview",
+                    "aiSearchVolume": 120,
+                    "targetMentioned": true,
+                    "targetCited": true,
+                    "competitorsMentioned": [
+                        "zyte.com"
+                    ],
+                    "competitorsCited": [
+                        "zyte.com"
+                    ],
+                    "sourceDomains": [
+                        "apify.com",
+                        "zyte.com",
+                        "dataforseo.com"
+                    ],
+                    "answerSnippet": "The answer compares hosted web scraping APIs, proxy handling, browser automation, and data export options."
+                }
+            ],
+            "metrics": {
+                "topic": "web scraping api",
+                "platform": "google",
+                "targetDomain": "apify.com",
+                "brandName": "Apify",
+                "competitorDomains": [
+                    "zyte.com",
+                    "brightdata.com"
+                ],
+                "returnedMentions": 6,
+                "targetMentions": 2,
+                "competitorMentions": 4,
+                "gapScore": 64,
+                "citationDomains": [
+                    "apify.com",
+                    "zyte.com",
+                    "brightdata.com",
+                    "dataforseo.com"
+                ],
+                "totalAvailable": 6
+            },
+            "checkedAt": "2026-07-26T19:25:22Z"
+        },
+        {
+            "input": "google ai overview tracker",
+            "status": "ANALYZED",
+            "score": 41,
+            "reportType": "llm-brand-mentions-monitor",
+            "summary": "google ai overview tracker on google: target visible in 1/4 row(s); competitors visible in 1/4.",
+            "recommendations": [
+                "Preserve cited pages and keep factual claims, comparison language, and entity descriptions stable.",
+                "Use recurring citation domains as a PR, partner, or source-inclusion list."
+            ],
+            "highlights": [
+                {
+                    "question": "How can teams monitor Google AI Overview visibility?",
+                    "platform": "google",
+                    "modelName": "ai_overview",
+                    "aiSearchVolume": 40,
+                    "targetMentioned": true,
+                    "targetCited": false,
+                    "competitorsMentioned": [],
+                    "competitorsCited": [],
+                    "sourceDomains": [
+                        "developers.google.com",
+                        "dataforseo.com"
+                    ],
+                    "answerSnippet": "The answer describes tracking AI Overview appearances, cited sources, and competitor visibility over time."
+                }
+            ],
+            "metrics": {
+                "topic": "google ai overview tracker",
+                "platform": "google",
+                "targetDomain": "apify.com",
+                "brandName": "Apify",
+                "competitorDomains": [
+                    "zyte.com",
+                    "brightdata.com"
+                ],
+                "returnedMentions": 4,
+                "targetMentions": 1,
+                "competitorMentions": 1,
+                "gapScore": 8,
+                "citationDomains": [
+                    "developers.google.com",
+                    "dataforseo.com"
+                ],
+                "totalAvailable": 4
+            },
+            "checkedAt": "2026-07-26T19:25:22Z"
+        }
+    ]
+}

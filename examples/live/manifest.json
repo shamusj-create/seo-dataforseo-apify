@@ -13,6 +13,16 @@
             "artifact": "keyword-roi-scorer.json"
         },
         {
+            "actor": "llm-brand-mentions-monitor",
+            "runId": "sanitized-controlled-demo",
+            "artifact": "llm-brand-mentions-monitor.json"
+        },
+        {
+            "actor": "backlink-gap-audit-report",
+            "runId": "sanitized-controlled-demo",
+            "artifact": "backlink-gap-audit-report.json"
+        },
+        {
             "actor": "serp-content-brief-generator",
             "runId": "EfaIdAD4tfkrl6kJu",
             "artifact": "serp-content-brief-generator.json"

@@ -1,11 +1,13 @@
 # SEO and AI Visibility Suite for Apify
 
-Copy-paste Apify examples for keyword ROI scoring, Google AI Overview visibility, SERP content briefs, competitor PPC creative monitoring, Google Shopping price comparison, Google Play ASO opportunity research, and Google Reviews complaint mining.
+Copy-paste Apify examples for keyword ROI scoring, Google AI Overview visibility, LLM brand mentions, backlink gap audits, SERP content briefs, competitor PPC creative monitoring, Google Shopping price comparison, Google Play ASO opportunity research, and Google Reviews complaint mining.
 
 Try on Apify:
 
 - [AI SERP Visibility Monitor](https://apify.com/changeable_peddler/ai-serp-visibility-monitor)
 - [Keyword ROI Scorer](https://apify.com/changeable_peddler/keyword-roi-scorer)
+- [LLM Brand Mentions Monitor](https://apify.com/changeable_peddler/llm-brand-mentions-monitor)
+- [Backlink Gap Audit Report](https://apify.com/changeable_peddler/backlink-gap-audit-report)
 - [SERP Content Brief Generator](https://apify.com/changeable_peddler/serp-content-brief-generator)
 - [PPC Ad Creative Monitor](https://apify.com/changeable_peddler/ppc-ad-creative-monitor)
 - [Shopping Price Gap Finder](https://apify.com/changeable_peddler/shopping-price-gap-finder)
@@ -14,7 +16,7 @@ Try on Apify:
 
 This repository is for teams that want repeatable search intelligence without building DataForSEO plumbing, result normalization, scoring logic, or dataset exports from scratch.
 
-See the proof first: [seven controlled live-run artifacts](examples/live/manifest.json) and [sample outputs and case studies](docs/sample-outputs-and-case-studies.md). Controlled demonstrations show successful execution and output shape; they are not customer usage.
+See the proof first: [nine controlled live-run artifacts](examples/live/manifest.json) and [sample outputs and case studies](docs/sample-outputs-and-case-studies.md). Controlled demonstrations show successful execution and output shape; they are not customer usage.
 
 Run one bounded example:
 
@@ -27,6 +29,8 @@ APIFY_TOKEN=your_token_here npm run run-suite -- --actor serp-content-brief-gene
 
 - Score keyword ideas with search volume, CPC, competition, and a build-or-skip recommendation.
 - Track Google AI Overview visibility for target and competitor domains.
+- Monitor LLM brand mentions, AI-search citations, and competitor visibility by topic.
+- Find competitor-only referring domains for backlink gap audits and outreach planning.
 - Generate content briefs from live SERPs, People Also Ask, related searches, and ranking gaps.
 - Monitor competitor PPC messaging with Google Ads Transparency data.
 - Compare Google Shopping price spreads and seller concentration.
@@ -39,6 +43,8 @@ APIFY_TOKEN=your_token_here npm run run-suite -- --actor serp-content-brief-gene
 - [Sample outputs and case studies](docs/sample-outputs-and-case-studies.md)
 - [Keyword ROI scorer and search volume CPC API](docs/keyword-roi-search-volume-cpc-api.md)
 - [Google AI Overview visibility monitor](docs/ai-overview-visibility-monitor.md)
+- [LLM brand mentions monitor and GEO citation workflow](docs/llm-brand-mentions-monitor.md)
+- [Backlink gap audit and referring domains API](docs/backlink-gap-audit-api.md)
 - [SERP content brief and People Also Ask API](docs/serp-content-brief-api.md)
 - [PPC, Shopping, and ASO research workflow](docs/ppc-shopping-aso-research-workflow.md)
 - [Google Reviews complaint miner and reputation risk API](docs/reputation-risk-google-reviews-api.md)
@@ -47,6 +53,8 @@ APIFY_TOKEN=your_token_here npm run run-suite -- --actor serp-content-brief-gene
 
 - [Keyword ROI input](examples/keyword-roi-input.json)
 - [AI SERP visibility input](examples/ai-serp-visibility-input.json)
+- [LLM brand mentions input](examples/llm-brand-mentions-input.json)
+- [Backlink gap audit input](examples/backlink-gap-input.json)
 - [SERP content brief input](examples/serp-content-brief-input.json)
 - [PPC creative monitor input](examples/ppc-ad-creative-input.json)
 - [Google Shopping price gap input](examples/shopping-price-gap-input.json)
@@ -57,6 +65,8 @@ APIFY_TOKEN=your_token_here npm run run-suite -- --actor serp-content-brief-gene
 
 - [AI SERP visibility](examples/live/ai-serp-visibility-monitor.json)
 - [Keyword ROI](examples/live/keyword-roi-scorer.json)
+- [LLM brand mentions](examples/live/llm-brand-mentions-monitor.json)
+- [Backlink gap audit](examples/live/backlink-gap-audit-report.json)
 - [SERP content brief](examples/live/serp-content-brief-generator.json)
 - [PPC ad creative](examples/live/ppc-ad-creative-monitor.json)
 - [Google Shopping price gap](examples/live/shopping-price-gap-finder.json)
@@ -97,7 +107,8 @@ The script in [examples/run-suite.js](examples/run-suite.js) runs one bounded ex
 
 ## Common Workflows
 
-- SEO workflow: keyword ROI scorer -> SERP content brief -> AI SERP visibility monitor.
+- SEO workflow: keyword ROI scorer -> SERP content brief -> AI SERP visibility monitor -> LLM brand mentions monitor.
+- Authority workflow: backlink gap audit report -> outreach shortlist -> content refresh queue.
 - Competitive workflow: PPC creative monitor -> Shopping price gap finder -> App Store ASO opportunity finder.
 - Local reputation workflow: Local Review Complaint Miner -> issue theme spreadsheet -> sales, support, or reputation queue.
 - Reporting workflow: Actor dataset -> CSV export -> Looker Studio, Sheets, CRM, or internal dashboard.

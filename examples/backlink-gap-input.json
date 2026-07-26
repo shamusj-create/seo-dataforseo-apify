@@ -1,0 +1,9 @@
+{
+  "targetDomain": "apify.com",
+  "competitorDomains": [
+    "scrapingbee.com",
+    "zyte.com",
+    "brightdata.com"
+  ],
+  "limit": 25
+}
