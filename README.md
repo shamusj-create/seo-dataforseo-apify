@@ -1,15 +1,22 @@
 # SEO and AI Visibility Suite for Apify
 
-Copy-paste Apify examples for keyword ROI scoring, Google AI Overview visibility, LLM brand mentions, backlink gap audits, SERP content briefs, competitor PPC creative monitoring, Google Shopping price comparison, Google Play ASO opportunity research, and Google Reviews complaint mining.
+Start with the research task you need to finish. These two Actors have the clearest buyer paths:
 
-Try on Apify:
+1. **Prioritize a client's existing keyword list.** [Run a Google keyword volume and CPC example](https://apify.com/changeable_peddler/keyword-roi-scorer/examples/keyword-roi-scoring) to see the input and results preview. The Actor returns Google Ads search volume, CPC, advertiser competition, and a research-priority score for up to 100 supplied keywords. [Follow the keyword-to-CSV guide](docs/keyword-volume-cpc-client-prioritization.md) and [inspect an illustrative row](docs/sample-outputs-and-case-studies.md#keyword-roi-scorer). The price is **$0.25 per batch**.
+2. **Inventory a competitor's Google ad creatives.** [Run a Google Ads Transparency example](https://apify.com/changeable_peddler/ppc-ad-creative-monitor/examples/ppc-creative-monitor) to see a ready-to-edit advertiser input. The Actor returns available creative records, formats, shown dates, and links for an advertiser domain. [Follow the competitor-review guide](docs/google-ads-transparency-competitor-review.md) and [inspect a controlled output excerpt](docs/sample-outputs-and-case-studies.md#ppc-ad-creative-monitor). The price is **$0.04 per advertiser snapshot**. Check linked creatives yourself for ad messaging; the Actor does not reliably extract ad copy or compare runs.
 
+**Live data requires a paid Apify plan.** Free-plan runs return an empty dataset without making DataForSEO requests or charging report events. The Actor prices above are in addition to any applicable Apify plan charges. DataForSEO access is included; you do not need your own DataForSEO account.
+
+The rest of the suite provides copy-paste Apify examples for AI Overview visibility, LLM brand mentions, backlink gap audits, SERP content briefs, Google Shopping prices, Google Play ASO, and Google Reviews complaints.
+
+All nine Actors on Apify:
+
+- [Google Keyword Search Volume & CPC API](https://apify.com/changeable_peddler/keyword-roi-scorer)
+- [Google Ads Transparency Scraper & Monitor](https://apify.com/changeable_peddler/ppc-ad-creative-monitor)
 - [AI SERP Visibility Monitor](https://apify.com/changeable_peddler/ai-serp-visibility-monitor)
-- [Keyword ROI Scorer](https://apify.com/changeable_peddler/keyword-roi-scorer)
 - [LLM Brand Mentions Monitor](https://apify.com/changeable_peddler/llm-brand-mentions-monitor)
 - [Backlink Gap Audit Report](https://apify.com/changeable_peddler/backlink-gap-audit-report)
 - [SERP Content Brief Generator](https://apify.com/changeable_peddler/serp-content-brief-generator)
-- [PPC Ad Creative Monitor](https://apify.com/changeable_peddler/ppc-ad-creative-monitor)
 - [Shopping Price Gap Finder](https://apify.com/changeable_peddler/shopping-price-gap-finder)
 - [App Store ASO Opportunity Finder](https://apify.com/changeable_peddler/app-store-aso-opportunity-finder)
 - [Local Review Complaint Miner](https://apify.com/changeable_peddler/local-review-complaint-miner)
@@ -18,11 +25,11 @@ This repository is for teams that want repeatable search intelligence without bu
 
 See the proof first: [nine controlled live-run artifacts](examples/live/manifest.json) and [sample outputs and case studies](docs/sample-outputs-and-case-studies.md). Controlled demonstrations show successful execution and output shape; they are not customer usage.
 
-Run one bounded example:
+Run one bounded example on a paid Apify plan:
 
 ```bash
 npm install
-APIFY_TOKEN=your_token_here npm run run-suite -- --actor serp-content-brief-generator
+APIFY_TOKEN=your_token_here npm run run-suite -- --actor keyword-roi-scorer
 ```
 
 ## Use Cases
@@ -32,13 +39,15 @@ APIFY_TOKEN=your_token_here npm run run-suite -- --actor serp-content-brief-gene
 - Monitor LLM brand mentions, AI-search citations, and competitor visibility by topic.
 - Find competitor-only referring domains for backlink gap audits and outreach planning.
 - Generate content briefs from live SERPs, People Also Ask, related searches, and ranking gaps.
-- Monitor competitor PPC messaging with Google Ads Transparency data.
+- Inventory competitor Google Ads Transparency creatives and review their linked previews for messaging.
 - Compare Google Shopping price spreads and seller concentration.
 - Find Google Play ASO keyword opportunities from app rankings and review signals.
 - Mine low-star Google Reviews for recurring complaint themes and reputation risk.
 
 ## Tutorials
 
+- [Prioritize a client's keyword list with Google search volume and CPC](docs/keyword-volume-cpc-client-prioritization.md)
+- [Review competitor Google Ads Transparency creatives by domain](docs/google-ads-transparency-competitor-review.md)
 - [How to automate SEO opportunity and AI visibility checks with Apify](docs/seo-ai-visibility-workflow-with-apify.md)
 - [Sample outputs and case studies](docs/sample-outputs-and-case-studies.md)
 - [Keyword ROI scorer and search volume CPC API](docs/keyword-roi-search-volume-cpc-api.md)
@@ -81,20 +90,20 @@ Install dependencies:
 npm install
 ```
 
-Run the suite:
+Run one Actor:
 
 ```bash
-APIFY_TOKEN=your_token_here npm run run-suite
+APIFY_TOKEN=your_token_here npm run run-suite -- --actor keyword-roi-scorer
 ```
 
-List or run one Actor:
+List the available Actors, or run the PPC example:
 
 ```bash
 npm run run-suite -- --list
-APIFY_TOKEN=your_token_here npm run run-suite -- --actor local-review-complaint-miner
+APIFY_TOKEN=your_token_here npm run run-suite -- --actor ppc-ad-creative-monitor
 ```
 
-The script in [examples/run-suite.js](examples/run-suite.js) runs one bounded example per Actor and prints the first dataset row from each run.
+The script in [examples/run-suite.js](examples/run-suite.js) prints the first dataset rows. If you omit `--actor`, it runs all nine examples and can incur charges for each Actor. The script does not set a run spending limit; review pricing before using it.
 
 ## Output Fields To Review First
 

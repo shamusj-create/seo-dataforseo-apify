@@ -12,7 +12,7 @@ This workflow helps product, growth, and ecommerce teams look at paid messaging,
 
 Use [examples/ppc-ad-creative-input.json](../examples/ppc-ad-creative-input.json) to inspect competitor messaging in Google Ads Transparency data.
 
-Look for active angles, repeated claims, landing-page themes, and ad formats.
+Start with the [focused competitor-review guide](google-ads-transparency-competitor-review.md). The Actor returns creative records, available dates and formats, and links to inspect. In the controlled run, `activeAngles` contained an advertiser name rather than ad copy; review the linked creatives yourself for claims, CTAs, and landing-page themes. Live data requires a paid Apify plan and costs $0.04 per advertiser snapshot in Actor report events.
 
 ## Google Shopping price comparison
 
