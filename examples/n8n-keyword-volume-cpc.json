@@ -1,0 +1,189 @@
+{
+  "id": "b681be22-ea95-41c5-9b2e-a06b0b8c6ed1",
+  "name": "Google keyword search volume and CPC to CSV",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Set up before executing\n\n1. Live data requires a **paid Apify plan**. This Actor charges **$0.25 per keyword batch**, up to 100 keywords, plus any applicable Apify plan charges.\n2. In **Prepare keyword batch**, edit keywords, locationCode, and languageCode. 2840 = United States; en = English.\n3. In **Run keyword Actor**, select/create a Header Auth credential: Name = Authorization; Value = Bearer YOUR_APIFY_TOKEN. Store your token in the credential, never in workflow JSON.\n4. Each manual execution starts one paid run. The run spending cap is **$0.26** to leave $0.01 headroom for any start event. Automatic retries are disabled.\n5. Execute manually, then download the CSV from **Export planning CSV**. Empty datasets and error rows stop the workflow; inspect the existing run before retrying.\n\nThis workflow is inactive and has no schedule. Imported in n8n 2.41.5; the CSV and code steps passed a mock execution using historical output, with the HTTP node entirely replaced. Live API authentication and provider requests were not executed. The score is a research-priority signal, not financial ROI or organic ranking difficulty.",
+        "height": 560,
+        "width": 640
+      },
+      "id": "5e709ee2-1976-4b66-acf5-df1ab097f327",
+      "name": "Setup and price",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        240,
+        -340
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "e1e5ca9a-c1e4-46d8-967b-5f42655e6b03",
+      "name": "Manual start",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Edit only these three values. One execution starts one paid Actor run.\nconst keywords = [\n  'best web scraping api',\n  'google ai overview tracker',\n  'seo api',\n];\nconst locationCode = 2840;\nconst languageCode = 'en';\n\nif (!Array.isArray(keywords) || keywords.some((keyword) => typeof keyword !== 'string')) {\n  throw new Error('keywords must be an array of strings.');\n}\nconst cleanedKeywords = [...new Set(keywords.map((keyword) => keyword.trim()).filter(Boolean))];\nif (cleanedKeywords.length < 1 || cleanedKeywords.length > 100) {\n  throw new Error('Provide 1–100 nonblank, unique keywords in one batch.');\n}\nif (!Number.isInteger(locationCode) || locationCode < 1 || locationCode > 100000000) {\n  throw new Error('locationCode must be an integer from 1 to 100000000.');\n}\nif (typeof languageCode !== 'string' || !/^[a-z]{2,3}(?:-[A-Za-z]{2,4})?$/.test(languageCode.trim())) {\n  throw new Error('Provide a valid Google language code, for example en, es, de, or fr.');\n}\n// Do not prefix formula-leading keywords here: the provider needs the original terms.\n// Spreadsheet protection is applied only to the exported text after results return.\nreturn [{ json: { keywords: cleanedKeywords, locationCode, languageCode: languageCode.trim() } }];"
+      },
+      "id": "35e74af2-5719-4cde-9c23-8b5fcd6e129a",
+      "name": "Prepare keyword batch",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.apify.com/v2/actors/changeable_peddler~keyword-roi-scorer/run-sync-get-dataset-items",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "maxTotalChargeUsd",
+              "value": "0.26"
+            },
+            {
+              "name": "timeout",
+              "value": "120"
+            },
+            {
+              "name": "restartOnError",
+              "value": "false"
+            },
+            {
+              "name": "clean",
+              "value": "true"
+            },
+            {
+              "name": "format",
+              "value": "json"
+            },
+            {
+              "name": "limit",
+              "value": "100"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "json",
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "timeout": 130000,
+          "response": {
+            "response": {
+              "fullResponse": true,
+              "responseFormat": "json",
+              "neverError": false
+            }
+          }
+        }
+      },
+      "id": "c44c9972-71c3-4a02-8172-79f0320b0fd7",
+      "name": "Run keyword Actor",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        720,
+        300
+      ],
+      "retryOnFail": false
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const responseItems = $input.all();\nif (responseItems.length !== 1) {\n  throw new Error('Expected one full HTTP response. Enable Include Response Headers and Status on the HTTP node.');\n}\nconst response = responseItems[0].json;\nif (!Number.isInteger(response.statusCode) || response.statusCode < 200 || response.statusCode >= 300) {\n  throw new Error('The Apify request did not return a successful HTTP status.');\n}\nconst rows = response.body;\nif (!Array.isArray(rows)) {\n  throw new Error('Expected an array of dataset rows in the HTTP response body.');\n}\nif (rows.length === 0) {\n  throw new Error('No keyword rows returned. Check the Apify paid plan, run spending limit, and run log before retrying.');\n}\nif (rows.length > 100) {\n  throw new Error('Unexpected result size: this workflow handles one batch of at most 100 keywords.');\n}\nconst batch = $('Prepare keyword batch').first().json;\nfunction spreadsheetText(value) {\n  const text = value == null ? '' : String(value);\n  return (/^\\s*[=+\\-@]/.test(text) || /^[\\t\\r\\n]/.test(text)) ? \"'\" + text : text;\n}\nfunction numeric(value, field, index) {\n  if (typeof value !== 'number' || !Number.isFinite(value) || value < 0) {\n    throw new Error('Invalid ' + field + ' in result row ' + (index + 1) + '.');\n  }\n  return value;\n}\nreturn rows.map((row, index) => {\n  if (!row || typeof row !== 'object' || Array.isArray(row) || row.status !== 'ANALYZED') {\n    throw new Error('Result row ' + (index + 1) + ' was not analyzed. Inspect the run log before retrying; a report event may already have been charged.');\n  }\n  if (typeof row.input !== 'string' || !row.input.trim()\n      || !row.metrics || typeof row.metrics !== 'object' || Array.isArray(row.metrics)\n      || !Array.isArray(row.recommendations) || row.recommendations.some((value) => typeof value !== 'string')\n      || typeof row.checkedAt !== 'string' || !Number.isFinite(Date.parse(row.checkedAt))) {\n    throw new Error('Unexpected keyword result shape in row ' + (index + 1) + '.');\n  }\n  if (row.metrics.competition != null && typeof row.metrics.competition !== 'string') {\n    throw new Error('Unexpected advertiser competition in row ' + (index + 1) + '.');\n  }\n  return { json: {\n    keyword: spreadsheetText(row.input),\n    locationCode: batch.locationCode,\n    languageCode: spreadsheetText(batch.languageCode),\n    searchVolume: numeric(row.metrics.searchVolume, 'search volume', index),\n    cpc: numeric(row.metrics.cpc, 'CPC', index),\n    advertiserCompetition: spreadsheetText(row.metrics.competition),\n    advertiserCompetitionIndex: numeric(row.metrics.competitionIndex, 'advertiser competition index', index),\n    researchPriorityScore: numeric(row.score, 'research-priority score', index),\n    recommendation: spreadsheetText(row.recommendations.join(' | ')),\n    checkedAt: spreadsheetText(row.checkedAt),\n  } };\n}).sort((a, b) => b.json.researchPriorityScore - a.json.researchPriorityScore\n  || a.json.keyword.localeCompare(b.json.keyword));"
+      },
+      "id": "8372a92f-2022-4975-a5d0-bd1e7ba4fe56",
+      "name": "Validate and flatten results",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "csv",
+        "binaryPropertyName": "data",
+        "options": {
+          "fileName": "keyword-volume-cpc.csv",
+          "headerRow": true
+        }
+      },
+      "id": "46bc175b-ef85-4ce2-b531-678d5047838a",
+      "name": "Export planning CSV",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1200,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "Manual start": {
+      "main": [
+        [
+          {
+            "node": "Prepare keyword batch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare keyword batch": {
+      "main": [
+        [
+          {
+            "node": "Run keyword Actor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run keyword Actor": {
+      "main": [
+        [
+          {
+            "node": "Validate and flatten results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate and flatten results": {
+      "main": [
+        [
+          {
+            "node": "Export planning CSV",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "pinData": {}
+}

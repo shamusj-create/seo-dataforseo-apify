@@ -7,6 +7,8 @@ Start with the research task you need to finish. These two Actors have the clear
 
 **Live data requires a paid Apify plan.** Free-plan runs return an empty dataset without making DataForSEO requests or charging report events. The Actor prices above are in addition to any applicable Apify plan charges. DataForSEO access is included; you do not need your own DataForSEO account.
 
+Bring the keyword shortlist into your existing workflow: [import the n8n keyword-to-CSV workflow](docs/keyword-volume-cpc-n8n.md), use its Google Sheets field mapping, or [configure keyword research and ad inventory as MCP tools](docs/keyword-and-ad-inventory-mcp.md). The downloadable workflow uses one manual run with a $0.26 total charge cap. Inspect the historical output before buying live data.
+
 The rest of the suite provides copy-paste Apify examples for AI Overview visibility, LLM brand mentions, backlink gap audits, SERP content briefs, Google Shopping prices, Google Play ASO, and Google Reviews complaints.
 
 All nine Actors on Apify:
@@ -46,6 +48,8 @@ APIFY_TOKEN=your_token_here npm run run-suite -- --actor keyword-roi-scorer
 
 ## Tutorials
 
+- [Get Google keyword search volume and CPC into a CSV with n8n](docs/keyword-volume-cpc-n8n.md)
+- [Use keyword research and ad inventory from an MCP client](docs/keyword-and-ad-inventory-mcp.md)
 - [Prioritize a client's keyword list with Google search volume and CPC](docs/keyword-volume-cpc-client-prioritization.md)
 - [Review competitor Google Ads Transparency creatives by domain](docs/google-ads-transparency-competitor-review.md)
 - [How to automate SEO opportunity and AI visibility checks with Apify](docs/seo-ai-visibility-workflow-with-apify.md)
