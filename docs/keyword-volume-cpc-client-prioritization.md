@@ -1,14 +1,14 @@
 # Prioritize a client's keyword list with search volume and CPC
 
-An SEO agency often has more candidate topics than it can brief this month. This workflow turns a supplied keyword list into a sortable research queue before assigning writing work. It is useful when a client has already chosen a market and wants evidence for which topics to investigate first.
+An SEO agency often has more candidate topics than it can brief this month. This workflow turns a supplied list of up to 1,000 keywords into a sortable research queue before assigning writing work. It is useful when a client has already chosen a market and wants evidence for which topics to investigate first, including lists passed from an existing spreadsheet or automation.
 
 Use [the published Google keyword volume and CPC example](https://apify.com/changeable_peddler/keyword-roi-scorer/examples/keyword-roi-scoring) to see a ready-to-edit input, or open the [Actor's Store page](https://apify.com/changeable_peddler/keyword-roi-scorer). It evaluates your list; it does not discover keywords, inspect organic ranking difficulty, or calculate financial ROI.
 
 ## First run in Apify Console
 
-1. Open the [Actor's Store page](https://apify.com/changeable_peddler/keyword-roi-scorer) and its Console input form, then enter 5–100 keywords from one client or campaign. Remove terms that do not fit the client's offer. If Apify labels the button **Try for free**, it opens Console; it does **not** mean this Actor provides a free live-data trial.
+1. Open the [Actor's Store page](https://apify.com/changeable_peddler/keyword-roi-scorer) and its Console input form. Use the five-keyword example below for a small first check, or enter up to 1,000 keywords from one client or campaign. Remove terms that do not fit the client's offer. If Apify labels the button **Try for free**, it opens Console; it does **not** mean this Actor provides a free live-data trial.
 2. Choose a named country/language market, such as **United States — English**. Select **Custom / advanced codes** to use location/language fields for another supported market. Keep the resolved market consistent when comparing runs.
-3. Review the [Pricing tab](https://apify.com/changeable_peddler/keyword-roi-scorer/pricing), then set a run spending limit that allows one **$0.25 keyword-batch-scored event**. Each run is one batch of up to 100 keywords. Live results require a paid Apify plan; DataForSEO access is included.
+3. Review the [Pricing tab](https://apify.com/changeable_peddler/keyword-roi-scorer/pricing), then set a run spending limit that allows one **$0.25 keyword-batch-scored event**. Each run is one batch of up to 1,000 keywords at a flat $0.25—not per keyword. A five-term check costs the same as a full batch, so the fixed price is intended for bulk lists. Live results require a paid Apify plan; DataForSEO access is included.
 4. Run the Actor and open the **Keyword planning sheet** dataset view. Sort by `score`, then inspect the separate search volume, CPC, and advertiser competition columns for every candidate you might brief.
 5. Use the **Keyword planning CSV** output link, export CSV from that view, or keep JSON if you need the supporting provider data. New results include the resolved market. Add your own columns for business relevance, organic SERP difficulty, conversion rate, and estimated value before approving a brief.
 
@@ -31,7 +31,7 @@ A shorter three-keyword version is saved as [keyword-roi-input.json](../examples
 
 ## Inspect a real historical planning sheet without running
 
-These three rows come from a [controlled demonstration on 4 July 2026](../examples/live/keyword-roi-scorer.json), not a customer result or today's market data.
+These three rows come from a [controlled demonstration on 4 July 2026](../examples/live/keyword-roi-scorer.json), not a customer result, today's market data, or proof of a 1,000-keyword production run.
 
 | Keyword | Search volume | CPC | Advertiser competition | Competition index | Research score |
 |---|---:|---:|---|---:|---:|

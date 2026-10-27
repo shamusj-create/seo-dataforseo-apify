@@ -2,7 +2,7 @@
 
 Start with the research task you need to finish. These two Actors have the clearest buyer paths:
 
-1. **Prioritize a client's existing keyword list.** [Run a Google keyword volume and CPC example](https://apify.com/changeable_peddler/keyword-roi-scorer/examples/keyword-roi-scoring) to see the input and results preview. The Actor returns Google Ads search volume, CPC, advertiser competition, and a research-priority score for up to 100 supplied keywords. [Follow the keyword-to-CSV guide](docs/keyword-volume-cpc-client-prioritization.md) and [inspect an illustrative row](docs/sample-outputs-and-case-studies.md#keyword-roi-scorer). The price is **$0.25 per batch**.
+1. **Prioritize a client's bulk keyword list.** [Run a Google keyword volume and CPC example](https://apify.com/changeable_peddler/keyword-roi-scorer/examples/keyword-roi-scoring) to see the input and results preview. The Actor returns Google Ads search volume, CPC, advertiser competition, and a research-priority score for up to **1,000 supplied keywords**. [Follow the keyword-to-CSV guide](docs/keyword-volume-cpc-client-prioritization.md) and [inspect an illustrative row](docs/sample-outputs-and-case-studies.md#keyword-roi-scorer). The price is **a flat $0.25 per batch, not per keyword**; a five-term check costs the same as a 1,000-term batch.
 2. **Inventory a competitor's Google ad creatives.** [Run a Google Ads Transparency example](https://apify.com/changeable_peddler/ppc-ad-creative-monitor/examples/ppc-creative-monitor) to see a ready-to-edit advertiser input. The Actor returns available creative records, formats, shown dates, and links for an advertiser domain. [Follow the competitor-review guide](docs/google-ads-transparency-competitor-review.md) and [inspect a controlled output excerpt](docs/sample-outputs-and-case-studies.md#ppc-ad-creative-monitor). The price is **$0.04 per advertiser snapshot**. Check linked creatives yourself for ad messaging; the Actor does not reliably extract ad copy or compare runs.
 
 **Live data requires a paid Apify plan.** Free-plan runs return an empty dataset without making DataForSEO requests or charging report events. The Actor prices above are in addition to any applicable Apify plan charges. DataForSEO access is included; you do not need your own DataForSEO account.
@@ -13,7 +13,7 @@ The rest of the suite provides copy-paste Apify examples for AI Overview visibil
 
 All nine Actors on Apify:
 
-- [Google Keyword Search Volume & CPC API](https://apify.com/changeable_peddler/keyword-roi-scorer)
+- [Bulk Google Keyword Search Volume & CPC API](https://apify.com/changeable_peddler/keyword-roi-scorer)
 - [Google Ads Transparency Scraper & Monitor](https://apify.com/changeable_peddler/ppc-ad-creative-monitor)
 - [AI SERP Visibility Monitor](https://apify.com/changeable_peddler/ai-serp-visibility-monitor)
 - [LLM Brand Mentions Monitor](https://apify.com/changeable_peddler/llm-brand-mentions-monitor)

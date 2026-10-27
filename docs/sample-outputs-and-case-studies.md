@@ -59,7 +59,7 @@ Use this when the buyer needs a research-priority row for a supplied keyword. Th
 
 The score is a heuristic. Google Ads competition is not organic SEO difficulty, and this Actor cannot calculate financial ROI from these fields alone. The complete row also contains the provider record in `items`.
 
-Follow the [client keyword-prioritization guide](keyword-volume-cpc-client-prioritization.md) or inspect a [historical controlled live output](../examples/live/keyword-roi-scorer.json). Try it on Apify: [Google Keyword Search Volume & CPC API](https://apify.com/changeable_peddler/keyword-roi-scorer). Live data requires a paid Apify plan; one batch of up to 100 supplied keywords costs $0.25 in Actor report events.
+Follow the [client keyword-prioritization guide](keyword-volume-cpc-client-prioritization.md) or inspect a [historical controlled live output](../examples/live/keyword-roi-scorer.json). Try it on Apify: [Bulk Google Keyword Search Volume & CPC API](https://apify.com/changeable_peddler/keyword-roi-scorer). Live data requires a paid Apify plan; one batch of up to 1,000 supplied keywords costs a flat $0.25 in Actor report events, not per keyword. The July 4 historical artifact contains a three-row excerpt, not proof of a 1,000-keyword production run.
 
 ## PPC Ad Creative Monitor
 

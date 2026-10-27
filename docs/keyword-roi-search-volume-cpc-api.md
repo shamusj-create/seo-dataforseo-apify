@@ -2,7 +2,7 @@
 
 [Keyword ROI Scorer](https://apify.com/changeable_peddler/keyword-roi-scorer) is an Apify Actor for turning keyword ideas into a prioritized opportunity dataset.
 
-For a complete client workflow, use the [keyword-prioritization guide](keyword-volume-cpc-client-prioritization.md). The score ranks research candidates; it does not calculate financial ROI or organic ranking difficulty. Live data requires a paid Apify plan and costs $0.25 per batch of up to 100 supplied keywords in Actor report events.
+For a complete client workflow, use the [keyword-prioritization guide](keyword-volume-cpc-client-prioritization.md). The score ranks research candidates; it does not calculate financial ROI or organic ranking difficulty. Live data requires a paid Apify plan and costs a flat $0.25 per batch of up to 1,000 supplied keywords in Actor report events—not per keyword. A five-term check costs the same, so the fixed batch price is intended for bulk lists.
 
 ## Demo input
 

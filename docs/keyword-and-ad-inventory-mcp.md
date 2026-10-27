@@ -24,7 +24,7 @@ A generic client configuration is:
 
 Sign in to Apify through the hosted server's OAuth flow when prompted, or use an Apify API token in your client's credential settings. Never paste a token into a public prompt or repository. Client configuration formats differ; use [Apify's official configuration guide](https://docs.apify.com/integrations/mcp) for your client. Confirm that the tool appears before asking the agent to run it.
 
-**Live results require a paid Apify plan.** The keyword Actor charges a $0.25 report event per batch of up to 100 supplied keywords. PPC charges $0.04 per advertiser snapshot, with up to 40 available creatives. DataForSEO access is included; applicable Apify plan charges are separate. Free-plan Actor runs make no provider request and return an empty dataset.
+**Live results require a paid Apify plan.** The keyword Actor charges a flat $0.25 report event per batch of up to 1,000 supplied keywords, not per keyword; a small check costs the same as a full batch. PPC charges $0.04 per advertiser snapshot, with up to 40 available creatives. DataForSEO access is included; applicable Apify plan charges are separate. Free-plan Actor runs make no provider request and return an empty dataset.
 
 ## Keyword planning prompt
 
