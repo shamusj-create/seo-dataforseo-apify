@@ -1,6 +1,6 @@
 {
     "generatedAt": "2026-07-14",
-    "label": "Controlled demonstrations. These artifacts prove output shape and successful execution; they are not customer usage.",
+    "label": "Historical outputs and sanitized illustrations, not current market data or customer outcomes. Demo run identifiers do not independently verify execution.",
     "actors": [
         {
             "actor": "ai-serp-visibility-monitor",

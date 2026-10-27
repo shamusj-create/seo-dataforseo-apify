@@ -1,131 +1,52 @@
-# SEO and AI Visibility Suite for Apify
+# SEO, Ads and App Research Examples for Apify
 
-Start with the research task you need to finish. These two Actors have the clearest buyer paths:
+Choose an Actor for the research task in front of you. This repository contains inputs and guides for nine independent tools, from bulk keyword metrics to competitor ad inventories and Google Play keyword results.
 
-1. **Prioritize a client's bulk keyword list.** [Run a Google keyword volume and CPC example](https://apify.com/changeable_peddler/keyword-roi-scorer/examples/keyword-roi-scoring) to see the input and results preview. The Actor returns Google Ads search volume, CPC, advertiser competition, and a research-priority score for up to **1,000 supplied keywords**. [Follow the keyword-to-CSV guide](docs/keyword-volume-cpc-client-prioritization.md) and [inspect an illustrative row](docs/sample-outputs-and-case-studies.md#keyword-roi-scorer). The price is **a flat $0.25 per batch, not per keyword**; a five-term check costs the same as a 1,000-term batch.
-2. **Inventory a competitor's Google ad creatives.** [Run a Google Ads Transparency example](https://apify.com/changeable_peddler/ppc-ad-creative-monitor/examples/ppc-creative-monitor) to see a ready-to-edit advertiser input. The Actor returns available creative records, formats, shown dates, and links for an advertiser domain. [Follow the competitor-review guide](docs/google-ads-transparency-competitor-review.md) and [inspect a controlled output excerpt](docs/sample-outputs-and-case-studies.md#ppc-ad-creative-monitor). The price is **$0.04 per advertiser snapshot**. Check linked creatives yourself for ad messaging; the Actor does not reliably extract ad copy or compare runs.
+**Live data requires a paid Apify plan.** DataForSEO access is included, so you do not need your own provider credentials. The report fees below are separate from any applicable Apify plan charges. Free-plan runs make no live provider requests, charge no report events and leave the dataset empty.
 
-**Live data requires a paid Apify plan.** Free-plan runs return an empty dataset without making DataForSEO requests or charging report events. The Actor prices above are in addition to any applicable Apify plan charges. DataForSEO access is included; you do not need your own DataForSEO account.
+## Choose a task
 
-Bring the keyword shortlist into your existing workflow: [import the n8n keyword-to-CSV workflow](docs/keyword-volume-cpc-n8n.md), use its Google Sheets field mapping, or [configure keyword research and ad inventory as MCP tools](docs/keyword-and-ad-inventory-mcp.md). The downloadable workflow uses one manual run with a $0.26 total charge cap. Inspect the historical output before buying live data.
+| Your task | Actor and guide | Actor report fee, USD | Example input |
+|---|---|---|---|
+| Check demand and CPC for an existing keyword list | [Bulk Google Keyword Search Volume & CPC API](https://apify.com/changeable_peddler/keyword-roi-scorer) · [planning-sheet guide](docs/keyword-volume-cpc-client-prioritization.md) | Flat $0.25 per batch of up to 1,000 supplied keywords | [Keyword list](examples/keyword-roi-input.json) |
+| Prepare a brief from ranking pages and People Also Ask | [SERP Content Brief Generator](https://apify.com/changeable_peddler/serp-content-brief-generator) · [content-brief guide](docs/serp-content-brief-api.md) | $0.05 per keyword brief | [One query](examples/serp-content-brief-input.json) |
+| Check target and competitor domains in a Google result | [AI SERP Visibility Monitor](https://apify.com/changeable_peddler/ai-serp-visibility-monitor) · [AI Overview guide](docs/ai-overview-visibility-monitor.md) | $0.015 per keyword/location/device report | [Visibility check](examples/ai-serp-visibility-input.json) |
+| Review brand mentions and citation sources by topic | [LLM Brand Mentions Monitor](https://apify.com/changeable_peddler/llm-brand-mentions-monitor) · [mentions guide](docs/llm-brand-mentions-monitor.md) | $0.35 per topic/platform query | [Brand and topics](examples/llm-brand-mentions-input.json) |
+| Find referring domains returned for competitors but missing for your target | [Backlink Gap Audit Report](https://apify.com/changeable_peddler/backlink-gap-audit-report) · [gap-audit guide](docs/backlink-gap-audit-api.md) | $0.25 per bounded gap report | [Target and competitors](examples/backlink-gap-input.json) |
+| Export a competitor's available Google ad creatives | [Google Ads Transparency Scraper - Ad Creative Export](https://apify.com/changeable_peddler/ppc-ad-creative-monitor) · [creative-review guide](docs/google-ads-transparency-competitor-review.md) | $0.04 per advertiser snapshot, up to 40 creatives | [Advertiser domain](examples/ppc-ad-creative-input.json) |
+| Compare priced offers returned for a product query | [Shopping Price Gap Finder](https://apify.com/changeable_peddler/shopping-price-gap-finder) · [Google Shopping guide](docs/google-shopping-price-comparison.md) | $0.08 per product-query report | [Product query](examples/shopping-price-gap-input.json) |
+| Inspect the apps ranking for a Google Play keyword | [Google Play ASO Keyword Research & App Rankings API](https://apify.com/changeable_peddler/app-store-aso-opportunity-finder) · [Google Play guide](docs/google-play-aso-keyword-research.md) | $0.035 per app-keyword report | [App keyword](examples/app-store-aso-input.json) |
+| Review complaint themes in a sample of Google Reviews | [Local Review Complaint Miner](https://apify.com/changeable_peddler/local-review-complaint-miner) · [review-triage guide](docs/reputation-risk-google-reviews-api.md) | $0.06 per business report | [Business lookup](examples/local-review-complaint-input.json) |
 
-The rest of the suite provides copy-paste Apify examples for AI Overview visibility, LLM brand mentions, backlink gap audits, SERP content briefs, Google Shopping prices, Google Play ASO, and Google Reviews complaints.
+Check the selected Actor's Pricing tab before running it. Report billing is reserved before provider work, so an upstream error or empty response can occur after a charge. Inspect the existing run and `RUN_SUMMARY` before retrying, because repeating an unchanged failure can incur another charge.
 
-All nine Actors on Apify:
+## Inspect the output before a paid run
 
-- [Bulk Google Keyword Search Volume & CPC API](https://apify.com/changeable_peddler/keyword-roi-scorer)
-- [Google Ads Transparency Scraper & Monitor](https://apify.com/changeable_peddler/ppc-ad-creative-monitor)
-- [AI SERP Visibility Monitor](https://apify.com/changeable_peddler/ai-serp-visibility-monitor)
-- [LLM Brand Mentions Monitor](https://apify.com/changeable_peddler/llm-brand-mentions-monitor)
-- [Backlink Gap Audit Report](https://apify.com/changeable_peddler/backlink-gap-audit-report)
-- [SERP Content Brief Generator](https://apify.com/changeable_peddler/serp-content-brief-generator)
-- [Shopping Price Gap Finder](https://apify.com/changeable_peddler/shopping-price-gap-finder)
-- [App Store ASO Opportunity Finder](https://apify.com/changeable_peddler/app-store-aso-opportunity-finder)
-- [Local Review Complaint Miner](https://apify.com/changeable_peddler/local-review-complaint-miner)
+The [output examples](docs/sample-outputs-and-case-studies.md) separate illustrative rows from dated historical outputs, without claiming customer outcomes or financial return. Some archive entries are sanitized illustrations, so a timestamp does not make them current market data or independently verifiable live-run proof.
 
-This repository is for teams that want repeatable search intelligence without building DataForSEO plumbing, result normalization, scoring logic, or dataset exports from scratch.
+For a spreadsheet preview, download the [historical keyword CSV](examples/keyword-volume-cpc-historical-2026-07-04.csv) or [historical creative CSV](examples/ppc-creative-inventory-historical-2026-07-07.csv). The keyword preview is a three-row excerpt, not a demonstrated 1,000-keyword production run. The PPC example contains an advertiser label rather than dependable ad copy; review the linked creatives yourself for messaging.
 
-See the proof first: [nine controlled live-run artifacts](examples/live/manifest.json) and [sample outputs and case studies](docs/sample-outputs-and-case-studies.md). Controlled demonstrations show successful execution and output shape; they are not customer usage.
+## Run one example
 
-Run one bounded example on a paid Apify plan:
-
-```bash
-npm install
-APIFY_TOKEN=your_token_here npm run run-suite -- --actor keyword-roi-scorer
-```
-
-## Use Cases
-
-- Score keyword ideas with search volume, CPC, competition, and a build-or-skip recommendation.
-- Track Google AI Overview visibility for target and competitor domains.
-- Monitor LLM brand mentions, AI-search citations, and competitor visibility by topic.
-- Find competitor-only referring domains for backlink gap audits and outreach planning.
-- Generate content briefs from live SERPs, People Also Ask, related searches, and ranking gaps.
-- Inventory competitor Google Ads Transparency creatives and review their linked previews for messaging.
-- Compare Google Shopping price spreads and seller concentration.
-- Find Google Play ASO keyword opportunities from app rankings and review signals.
-- Mine low-star Google Reviews for recurring complaint themes and reputation risk.
-
-## Tutorials
-
-- [Get Google keyword search volume and CPC into a CSV with n8n](docs/keyword-volume-cpc-n8n.md)
-- [Use keyword research and ad inventory from an MCP client](docs/keyword-and-ad-inventory-mcp.md)
-- [Prioritize a client's keyword list with Google search volume and CPC](docs/keyword-volume-cpc-client-prioritization.md)
-- [Review competitor Google Ads Transparency creatives by domain](docs/google-ads-transparency-competitor-review.md)
-- [How to automate SEO opportunity and AI visibility checks with Apify](docs/seo-ai-visibility-workflow-with-apify.md)
-- [Sample outputs and case studies](docs/sample-outputs-and-case-studies.md)
-- [Keyword ROI scorer and search volume CPC API](docs/keyword-roi-search-volume-cpc-api.md)
-- [Google AI Overview visibility monitor](docs/ai-overview-visibility-monitor.md)
-- [LLM brand mentions monitor and GEO citation workflow](docs/llm-brand-mentions-monitor.md)
-- [Backlink gap audit and referring domains API](docs/backlink-gap-audit-api.md)
-- [SERP content brief and People Also Ask API](docs/serp-content-brief-api.md)
-- [PPC, Shopping, and ASO research workflow](docs/ppc-shopping-aso-research-workflow.md)
-- [Google Reviews complaint miner and reputation risk API](docs/reputation-risk-google-reviews-api.md)
-
-## Example Inputs
-
-- [Keyword ROI input](examples/keyword-roi-input.json)
-- [AI SERP visibility input](examples/ai-serp-visibility-input.json)
-- [LLM brand mentions input](examples/llm-brand-mentions-input.json)
-- [Backlink gap audit input](examples/backlink-gap-input.json)
-- [SERP content brief input](examples/serp-content-brief-input.json)
-- [PPC creative monitor input](examples/ppc-ad-creative-input.json)
-- [Google Shopping price gap input](examples/shopping-price-gap-input.json)
-- [Google Play ASO input](examples/app-store-aso-input.json)
-- [Google Reviews complaint input](examples/local-review-complaint-input.json)
-
-## Controlled Live Outputs
-
-- [AI SERP visibility](examples/live/ai-serp-visibility-monitor.json)
-- [Keyword ROI](examples/live/keyword-roi-scorer.json)
-- [LLM brand mentions](examples/live/llm-brand-mentions-monitor.json)
-- [Backlink gap audit](examples/live/backlink-gap-audit-report.json)
-- [SERP content brief](examples/live/serp-content-brief-generator.json)
-- [PPC ad creative](examples/live/ppc-ad-creative-monitor.json)
-- [Google Shopping price gap](examples/live/shopping-price-gap-finder.json)
-- [Google Play ASO](examples/live/app-store-aso-opportunity-finder.json)
-- [Google Reviews complaints](examples/live/local-review-complaint-miner.json)
-
-## JavaScript Example
-
-Install dependencies:
+Review the input file for the Actor you selected, including its market and number of queries. A five-keyword batch still costs the flat $0.25 report fee, while the other Actors use the units in the table above.
 
 ```bash
 npm install
-```
-
-Run one Actor:
-
-```bash
-APIFY_TOKEN=your_token_here npm run run-suite -- --actor keyword-roi-scorer
-```
-
-List the available Actors, or run the PPC example:
-
-```bash
 npm run run-suite -- --list
-APIFY_TOKEN=your_token_here npm run run-suite -- --actor ppc-ad-creative-monitor
+APIFY_TOKEN=your_token_here npm run run-suite -- --actor keyword-roi-scorer
 ```
 
-The script in [examples/run-suite.js](examples/run-suite.js) prints the first dataset rows. If you omit `--actor`, it runs all nine examples and can incur charges for each Actor. The script does not set a run spending limit; review pricing before using it.
+The list command does not start an Actor. The selected run command calls only the named Actor and prints a sample of its dataset. Store the token privately and do not commit it to this repository.
 
-## Output Fields To Review First
+**Always include `--actor`.** Omitting it runs all nine examples and can charge for each. The [example runner](examples/run-suite.js) does not set a per-run spending cap; use the Actor in Apify Console when you want to set an explicit maximum before execution. Each Actor is purchased separately, and these guides do not create schedules or send messages.
 
-- `status`: whether the target was processed cleanly.
-- `score`: normalized opportunity, risk, or visibility score where supported.
-- `summary`: short human-readable interpretation.
-- `recommendations`: suggested next actions.
-- `metrics`: structured values such as CPC, rank counts, price spread, reviews, or competitor coverage.
-- `highlights`: evidence behind the score, gap, risk, or opportunity.
+Prefer the Console? Open a ready-to-edit [keyword example](https://apify.com/changeable_peddler/keyword-roi-scorer/examples/keyword-roi-scoring) or [advertiser example](https://apify.com/changeable_peddler/ppc-ad-creative-monitor/examples/ppc-creative-monitor) and review its input and Pricing tab before execution.
 
-## Common Workflows
+## Connect the result to your workflow
 
-- SEO workflow: keyword ROI scorer -> SERP content brief -> AI SERP visibility monitor -> LLM brand mentions monitor.
-- Authority workflow: backlink gap audit report -> outreach shortlist -> content refresh queue.
-- Competitive workflow: PPC creative monitor -> Shopping price gap finder -> App Store ASO opportunity finder.
-- Local reputation workflow: Local Review Complaint Miner -> issue theme spreadsheet -> sales, support, or reputation queue.
-- Reporting workflow: Actor dataset -> CSV export -> Looker Studio, Sheets, CRM, or internal dashboard.
+- For bulk keyword lists, [import the n8n keyword-to-CSV workflow](docs/keyword-volume-cpc-n8n.md). It has Google Sheets field mapping, one manual trigger, a $0.26 run cap and no automatic retries.
+- To use keyword research or ad inventory from an AI client, follow the [MCP setup guide](docs/keyword-and-ad-inventory-mcp.md).
+- For content work, [choose a keyword, brief or visibility check](docs/seo-ai-visibility-workflow-with-apify.md) according to the decision you need to make.
+- For paid media, ecommerce or app research, [choose between ad inventory, Shopping prices and Google Play results](docs/ppc-shopping-aso-research-workflow.md). These answer different questions and need not run together.
 
-## Notes
-
-These examples use public demo inputs and do not include DataForSEO credentials. The Actors manage their own integration settings on Apify.
+Most reports share `status`, `summary` and a `checkedAt` timestamp. Inspect `metrics` and the supporting `highlights` or `items` before acting on a score. These scores organise further research without establishing profit, organic ranking difficulty, app demand or ad effectiveness.

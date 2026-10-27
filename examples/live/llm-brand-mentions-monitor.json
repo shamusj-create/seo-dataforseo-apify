@@ -1,6 +1,6 @@
 {
     "generatedAt": "2026-07-26T19:25:22Z",
-    "label": "Controlled demonstration. This is product proof, not customer usage.",
+    "label": "Sanitized output illustration, not independently verifiable live-run proof, current market data or customer usage.",
     "actor": "llm-brand-mentions-monitor",
     "runId": "sanitized-controlled-demo",
     "status": "SUCCEEDED",

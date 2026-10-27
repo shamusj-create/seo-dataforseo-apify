@@ -1,8 +1,8 @@
 # Backlink gap audit and referring domains API
 
-Use [Backlink Gap Audit Report](https://apify.com/changeable_peddler/backlink-gap-audit-report) when a buyer needs a bounded backlink gap report without building a link crawler or normalizing competitor-only referring domains by hand.
+Use [Backlink Gap Audit Report](https://apify.com/changeable_peddler/backlink-gap-audit-report) to make a bounded research shortlist from a target domain and its competitors. The provider's domain-intersection data supplies gap records with available rank, backlink counts and linked-target evidence.
 
-The Actor compares a target domain against competitor domains and returns outreach-ready referring-domain gaps with rank, backlink, referring-page, and linked-target evidence where available.
+Live data requires a paid Apify plan. A bounded report costs **$0.25 in Actor report events**, plus applicable Apify plan charges; DataForSEO access is included. Billing is reserved before the request, so an upstream error or empty result can occur after a charge.
 
 ## Example input
 
@@ -20,6 +20,14 @@ Start with [examples/backlink-gap-input.json](../examples/backlink-gap-input.jso
 }
 ```
 
+The example compares one target with three competitors and requests up to 25 records. Edit that input file before running only this Actor from the repository root:
+
+```bash
+APIFY_TOKEN=your_token_here npm run run-suite -- --actor backlink-gap-audit-report
+```
+
+The runner sets no per-run spending cap; use Apify Console if you need an explicit maximum. You do not need to buy keyword or content-brief reports to use the gap audit.
+
 ## What to inspect
 
 - `score`: normalized opportunity score from returned gap domains and available authority signals.
@@ -29,11 +37,10 @@ Start with [examples/backlink-gap-input.json](../examples/backlink-gap-input.jso
 - `highlights`: the top competitor-only referring domains to review first.
 - `items`: the full bounded list for spreadsheet triage.
 
-## Workflow
+## Check fit before adding a domain to a work queue
 
-1. Use [Keyword ROI Scorer](https://apify.com/changeable_peddler/keyword-roi-scorer) and [SERP Content Brief Generator](https://apify.com/changeable_peddler/serp-content-brief-generator) to decide which topics deserve authority work.
-2. Run Backlink Gap Audit Report against the target domain and 2-5 competitors.
-3. Tag each returned domain as editorial, directory, partner, listicle, integration, or low-quality.
-4. Build outreach and content-refresh tasks from the highest-fit domains.
+Review `linkedTargets` and the supporting `rawResult` to understand why a record was returned. This is a bounded provider index, not a fresh crawl of every link or proof that a publisher will accept a placement. Counts and scores do not establish topical relevance or link quality.
 
-Controlled output shape: [backlink-gap-audit-report.json](../examples/live/backlink-gap-audit-report.json).
+Export the report, then tag candidates by relevance and type before deciding whether any action is warranted. The Actor does not contact publishers or create an outreach campaign.
+
+The [sanitized output illustration](../examples/live/backlink-gap-audit-report.json) uses placeholder domains and a non-verifiable demo run ID. It demonstrates a stored example shape, not an independently verifiable live run, customer outcome or current link opportunity. Return to the [SEO task selector](seo-ai-visibility-workflow-with-apify.md) if you need a different kind of evidence.

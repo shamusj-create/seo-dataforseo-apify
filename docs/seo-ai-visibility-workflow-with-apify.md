@@ -1,59 +1,25 @@
-# How to automate SEO opportunity and AI visibility checks with Apify
+# Choose an SEO or AI visibility research task
 
-This workflow connects three buyer questions:
+Start with the decision you need to make. These five Actors provide different evidence, and none requires running the rest of the suite first.
 
-1. Which keywords are worth targeting?
-2. What should we write or improve?
-3. Are we visible in organic results and Google AI Overviews?
-4. Are we mentioned and cited in AI-search answers?
-5. Which referring-domain gaps can support authority work?
+| Your decision | Guide | Actor report fee, USD |
+|---|---|---|
+| Which supplied keywords deserve further research? | [Build a keyword-prioritisation sheet](keyword-volume-cpc-client-prioritization.md) | Flat $0.25 per batch of up to 1,000 keywords. |
+| What should a writer investigate for this query? | [Prepare a SERP content brief](serp-content-brief-api.md) | $0.05 per keyword brief. |
+| Does the returned Google result include our domain or cite it in an AI Overview? | [Check Google visibility](ai-overview-visibility-monitor.md) | $0.015 per keyword/location/device report. |
+| What indexed AI-search mention and citation records match this topic? | [Review LLM brand mentions](llm-brand-mentions-monitor.md) | $0.35 per topic/platform query. |
+| Which referring-domain records are returned for competitors and excluded for our target? | [Review a backlink gap report](backlink-gap-audit-api.md) | $0.25 per bounded report. |
 
-## Actors
+Live data requires a paid Apify plan. DataForSEO access is included, with report events billed separately from applicable Apify plan charges. Events are reserved before provider requests, so upstream errors or empty responses can occur after billing.
 
-- [Keyword ROI Scorer](https://apify.com/changeable_peddler/keyword-roi-scorer) scores search volume, CPC, competition, and priority.
-- [SERP Content Brief Generator](https://apify.com/changeable_peddler/serp-content-brief-generator) turns live SERP evidence into a content brief.
-- [AI SERP Visibility Monitor](https://apify.com/changeable_peddler/ai-serp-visibility-monitor) tracks owned and competitor visibility across rankings and AI Overview citations.
-- [LLM Brand Mentions Monitor](https://apify.com/changeable_peddler/llm-brand-mentions-monitor) tracks topic-level brand, competitor, and citation evidence in AI-search answers.
-- [Backlink Gap Audit Report](https://apify.com/changeable_peddler/backlink-gap-audit-report) finds competitor-only referring domains for authority planning.
+## Choose a proportionate first check
 
-## Step 1: Score keywords
+The keyword Actor is priced for bulk lists. A five-keyword sample costs the same $0.25 report fee as a batch of up to 1,000; the [illustrative output](sample-outputs-and-case-studies.md#keyword-roi-scorer) lets you inspect the format without paying for a fresh report. Google Ads advertiser competition is not organic ranking difficulty, and its score cannot establish financial ROI.
 
-Use [examples/keyword-roi-input.json](../examples/keyword-roi-input.json) with the Keyword ROI Scorer.
+If a query is already chosen, go straight to a content brief or visibility check. A brief gives a writer source material, while a visibility report records a provider observation; neither guarantees rankings or traffic. Topic-level LLM mention records come from a separate index and should not be treated as identical to a live Google result.
 
-Good inputs are buyer-intent phrases, competitor comparisons, and problem-aware searches. Start with 3-5 keywords, then expand only after the output shows a clear opportunity.
+## Keep evidence with the decision
 
-## Step 2: Generate a content brief
+Save the original input alongside `checkedAt` and the source records used for your decision. Separate illustrative outputs from historical runs, and compare like-for-like inputs when investigating change. These example guides do not create schedules, compare stored runs or send alerts.
 
-Use [examples/serp-content-brief-input.json](../examples/serp-content-brief-input.json) with the SERP Content Brief Generator.
-
-The output helps you see the top-ranking pages, People Also Ask coverage, related searches, SERP features, and whether your target domain already appears.
-
-## Step 3: Track AI Overview visibility
-
-Use [examples/ai-serp-visibility-input.json](../examples/ai-serp-visibility-input.json) with the AI SERP Visibility Monitor.
-
-Compare your target domain against direct competitors. The useful fields are ranking presence, AI Overview mentions, citation evidence, and competitor domains that appear where you do not.
-
-## Step 4: Track LLM brand mentions
-
-Use [examples/llm-brand-mentions-input.json](../examples/llm-brand-mentions-input.json) with the LLM Brand Mentions Monitor.
-
-Review `targetMentions`, `competitorMentions`, and `citationDomains` to see whether the target is being associated with the topic and which source domains influence the answer set.
-
-## Step 5: Find backlink gaps
-
-Use [examples/backlink-gap-input.json](../examples/backlink-gap-input.json) with the Backlink Gap Audit Report.
-
-Start with direct competitors from the SERP or AI visibility output. The returned `highlights` and `items` make a first outreach or authority audit queue.
-
-## What you get back
-
-- Dataset rows for each keyword.
-- Scores, summaries, and recommendations.
-- Competitor, citation, backlink, and SERP evidence you can export to a spreadsheet or dashboard.
-
-For compact example rows, see [sample outputs and case studies](sample-outputs-and-case-studies.md).
-
-## When to use this
-
-Use this before writing a new landing page, refreshing a stale content asset, validating a GEO/AI-search concern, or prioritizing a backlog of SEO ideas.
+For bulk keyword automation, see the [manual n8n-to-CSV workflow](keyword-volume-cpc-n8n.md) or [MCP setup](keyword-and-ad-inventory-mcp.md). For ad inventory, product offers, Google Play rankings or review samples, return to the [nine-Actor task selector](../README.md#choose-a-task).

@@ -1,29 +1,24 @@
-# Sample outputs and case studies
+# Sample outputs and worked examples
 
-These shortened examples show the dataset shape a buyer gets back from the SEO and AI Visibility Suite. The Keyword ROI example below uses invented metrics passed through the current report calculation. The PPC example is shortened from a dated, controlled live run. Examples for the other Actors are illustrative. Use a new run for current market evidence.
+These excerpts help you inspect report fields before paying for fresh data. The Keyword ROI example uses invented metrics passed through the current report calculation. The PPC excerpt comes from a dated, controlled run, while the other JSON examples on this page are illustrative rather than current market evidence.
 
-The workflow scenarios below are not customer case studies or evidence of customer outcomes. Full reports can include larger `highlights`, `metrics`, `items`, and `checkedAt` fields.
+No example is a customer case study or evidence of financial return. Consult the selected Actor's guide for its full fields and timestamps, because the AI SERP schema differs from most of the suite.
 
-## Controlled live-run proof
+## Archive provenance
 
-The [live-proof manifest](../examples/live/manifest.json) links to sanitized outputs from successful controlled runs for all nine Actors in this suite. These artifacts demonstrate execution and output shape; they do not represent customer usage or performance claims.
+The [archive manifest](../examples/live/manifest.json) lists all nine saved examples. Seven entries carry dated run identifiers and the LLM mentions and backlink entries use `sanitized-controlled-demo` identifiers. Those two are sanitized output illustrations, not independently verifiable live-run proof. Archive metadata alone does not verify execution against today's code or establish current provider coverage.
 
-## Case study: content opportunity workflow
+## Worked example: preparing a content decision
 
-A growth or content team can run the suite in sequence:
+A content team could start with an existing keyword list, inspect demand and CPC, then request a brief for the query it chooses. That is an example research path, not an observed customer outcome or a requirement to purchase the whole suite.
 
-- Score a shortlist with Keyword ROI Scorer.
-- Turn the strongest query into a SERP Content Brief.
-- Track target-domain and competitor visibility with AI SERP Visibility Monitor.
-- Check topic-level AI-search brand and citation evidence with LLM Brand Mentions Monitor.
-- Find competitor-only referring domains with Backlink Gap Audit Report.
-- Add PPC, Shopping, ASO, or review-mining Actors when the research question expands beyond organic search.
+If the query is already chosen, go straight to the [brief guide](serp-content-brief-api.md). For a visibility concern, use the [SEO and AI task selector](seo-ai-visibility-workflow-with-apify.md) to distinguish a live Google result from indexed mention records. Shopping, ads and Google Play research answer separate questions and have their own [task selector](ppc-shopping-aso-research-workflow.md).
 
-The shared fields make the output easy to combine: `input`, `status`, `score`, `summary`, `recommendations`, `highlights`, and `metrics`.
+Live data requires a paid Apify plan. Inspect the chosen Actor's Pricing tab and existing run before retrying, because report billing is reserved before provider work and errors can occur after a charge.
 
 ## Keyword ROI Scorer
 
-Use this when the buyer needs a research-priority row for a supplied keyword. This example is **illustrative, not live market data**; it uses invented metrics and the Actor's actual scoring and report format.
+Use this when the buyer needs a research-priority row for a supplied keyword. This example is **illustrative, not live market data**, using invented metrics with the Actor's actual scoring and report format.
 
 ```json
 {
@@ -59,7 +54,7 @@ Use this when the buyer needs a research-priority row for a supplied keyword. Th
 
 The score is a heuristic. Google Ads competition is not organic SEO difficulty, and this Actor cannot calculate financial ROI from these fields alone. The complete row also contains the provider record in `items`.
 
-Follow the [client keyword-prioritization guide](keyword-volume-cpc-client-prioritization.md) or inspect a [historical controlled live output](../examples/live/keyword-roi-scorer.json). Try it on Apify: [Bulk Google Keyword Search Volume & CPC API](https://apify.com/changeable_peddler/keyword-roi-scorer). Live data requires a paid Apify plan; one batch of up to 1,000 supplied keywords costs a flat $0.25 in Actor report events, not per keyword. The July 4 historical artifact contains a three-row excerpt, not proof of a 1,000-keyword production run.
+Follow the [client keyword-prioritization guide](keyword-volume-cpc-client-prioritization.md) or inspect a [historical controlled live output](../examples/live/keyword-roi-scorer.json). Try it on Apify: [Bulk Google Keyword Search Volume & CPC API](https://apify.com/changeable_peddler/keyword-roi-scorer). Live data requires a paid Apify plan, with a flat $0.25 Actor report fee per batch of up to 1,000 supplied keywords, not per keyword. The July 4 historical artifact contains a three-row excerpt, not proof of a 1,000-keyword production run.
 
 ## PPC Ad Creative Monitor
 
@@ -97,18 +92,17 @@ Use this for a domain-level inventory of available Google Ads Transparency creat
 }
 ```
 
-Here `activeAngles` contains an advertiser name, **not extracted ad copy**. The full row's `items` include creative records with Google Ads Transparency URLs and available preview assets; review those creatives yourself for messaging. Some preview URLs are null. The dates are provider observations. See the [full controlled output artifact](../examples/live/ppc-ad-creative-monitor.json) and [competitor-review guide](google-ads-transparency-competitor-review.md). Live data requires a paid Apify plan; each advertiser snapshot costs $0.04 in Actor report events.
+Here `activeAngles` contains an advertiser name, **not extracted ad copy**. Review the full row's `items` for Google Ads Transparency URLs and available preview assets, then inspect those creatives yourself for messaging. Some preview URLs are null, and the shown dates are provider observations. See the [full controlled output artifact](../examples/live/ppc-ad-creative-monitor.json) and [competitor-review guide](google-ads-transparency-competitor-review.md). Live data requires a paid Apify plan, with a $0.04 Actor report fee for each advertiser snapshot.
 
 ## SERP Content Brief Generator
 
-Use this when the buyer wants a content brief grounded in live SERP, People Also Ask, related-search, and AI Overview evidence.
+Use this for a draft brief from returned Google results, People Also Ask and related-search evidence. The invented values below illustrate selected fields without depicting a real ranking observation.
 
 ```json
 {
   "input": "best web scraping api",
   "reportType": "serp-content-brief-generator",
   "status": "ANALYZED",
-  "score": 87,
   "summary": "Brief built from 10 organic results, 8 PAA items, AI Overview present.",
   "recommendations": [
     "Refresh the existing ranking page using the outline and PAA gaps."
@@ -136,58 +130,54 @@ Use this when the buyer wants a content brief grounded in live SERP, People Also
 }
 ```
 
-Buyer takeaway: the Actor turns live SERP evidence into a content production handoff, not just a list of ranking URLs.
-
-Try it on Apify: [SERP Content Brief Generator](https://apify.com/changeable_peddler/serp-content-brief-generator).
+Review the source pages and add your audience, evidence and desired reader action before handing the outline to a writer. The report does not write or publish a finished article. Use the [content-brief guide](serp-content-brief-api.md) to review what [SERP Content Brief Generator](https://apify.com/changeable_peddler/serp-content-brief-generator) returns before starting a paid report.
 
 ## AI SERP Visibility Monitor
 
-Use this when the buyer wants to track owned and competitor visibility in organic results and Google AI Overview evidence.
+Use this to inspect tracked domains in the returned organic result and AI Overview evidence. The excerpt uses current AI SERP field names with illustrative values, without depicting a live market observation.
 
 ```json
 {
-  "input": "google ai overview tracker",
-  "reportType": "ai-serp-visibility-monitor",
+  "keyword": "google ai overview tracker",
   "status": "ANALYZED",
-  "score": 62,
-  "summary": "Target domain found in organic results; two competitors appear in the top organic set; AI Overview evidence detected.",
-  "recommendations": [
-    "Track this query weekly and compare citation movement against competitors.",
-    "Refresh pages that rank organically but are absent from AI Overview evidence."
-  ],
-  "highlights": [
+  "visibilityScore": 45,
+  "opportunityScore": 70,
+  "targetPresence": [
     {
-      "type": "TARGET_ORGANIC_MATCH",
       "domain": "apify.com",
-      "rank": 5
-    },
-    {
-      "type": "COMPETITOR_ORGANIC_MATCH",
-      "domain": "dataforseo.com",
-      "rank": 3
+      "found": true,
+      "bestRank": 5
     }
   ],
-  "metrics": {
-    "targetOrganicMatches": 1,
-    "competitorOrganicMatches": 2,
-    "aiOverviewPresent": true,
-    "targetAiOverviewMentioned": false
+  "competitorPresence": [
+    {
+      "domain": "dataforseo.com",
+      "found": true,
+      "bestRank": 3
+    }
+  ],
+  "aiOverview": {
+    "present": true,
+    "targetMentioned": false,
+    "targetCited": false,
+    "competitorMentioned": true,
+    "competitorCited": true,
+    "citedDomains": ["dataforseo.com"]
   }
 }
 ```
 
-Try it on Apify: [AI SERP Visibility Monitor](https://apify.com/changeable_peddler/ai-serp-visibility-monitor).
+The AI SERP schema uses `keyword`, separate visibility and opportunity scores, domain-presence arrays and an `aiOverview` object. Do not map it as if it had the generic `input`, `score`, `highlights` and `metrics` fields. See the [visibility guide](ai-overview-visibility-monitor.md) or open [AI SERP Visibility Monitor](https://apify.com/changeable_peddler/ai-serp-visibility-monitor).
 
 ## LLM Brand Mentions Monitor
 
-Use this when the buyer wants topic-level brand, competitor, and citation evidence from AI-search answers.
+Use this to compare the target's mentions with competitor records and inspect available citation sources by topic. The counts and source domains below are illustrative, not evidence of current model answers or customer results.
 
 ```json
 {
   "input": "web scraping api",
   "reportType": "llm-brand-mentions-monitor",
   "status": "ANALYZED",
-  "score": 68,
   "summary": "web scraping api on google: target visible in 2/6 row(s); competitors visible in 4/6.",
   "recommendations": [
     "Preserve cited pages and keep factual claims, comparison language, and entity descriptions stable.",
@@ -211,18 +201,17 @@ Use this when the buyer wants topic-level brand, competitor, and citation eviden
 }
 ```
 
-Try it on Apify: [LLM Brand Mentions Monitor](https://apify.com/changeable_peddler/llm-brand-mentions-monitor).
+See the [mentions guide](llm-brand-mentions-monitor.md) for source dates, supported platforms and the $0.35 query unit. Try it on Apify: [LLM Brand Mentions Monitor](https://apify.com/changeable_peddler/llm-brand-mentions-monitor).
 
 ## Backlink Gap Audit Report
 
-Use this when the buyer wants competitor-only referring domains for SEO authority planning and outreach triage.
+Use this for a bounded backlink research shortlist. These are invented counts and placeholder domains, not verified current link opportunities or outreach results.
 
 ```json
 {
   "input": "apify.com",
   "reportType": "backlink-gap-audit-report",
   "status": "ANALYZED",
-  "score": 72,
   "summary": "apify.com: found 25 competitor-only referring domain(s), average rank 47.8.",
   "recommendations": [
     "Prioritize outreach or digital PR review for the top gap domains: example-dev-news.com, automation-directory.example, data-tools-review.example.",
@@ -248,11 +237,23 @@ Use this when the buyer wants competitor-only referring domains for SEO authorit
 }
 ```
 
-Try it on Apify: [Backlink Gap Audit Report](https://apify.com/changeable_peddler/backlink-gap-audit-report).
+See the [gap-audit guide](backlink-gap-audit-api.md) for manual source review and the $0.25 report unit. Try it on Apify: [Backlink Gap Audit Report](https://apify.com/changeable_peddler/backlink-gap-audit-report).
+
+## Shopping Price Gap Finder
+
+The [historical Shopping output](../examples/live/shopping-price-gap-finder.json) contains saved offer records and price-summary fields. Its broad spreads are not verified margin opportunities: some source URLs are null, and product titles must be checked for model, condition and quantity. Follow the [Google Shopping comparison guide](google-shopping-price-comparison.md) to interpret the sample before running [Shopping Price Gap Finder](https://apify.com/changeable_peddler/shopping-price-gap-finder).
+
+## App Store ASO Opportunity Finder
+
+The [historical Google Play output](../examples/live/app-store-aso-opportunity-finder.json) contains ranking apps and a heuristic opportunity score. The sample includes null review counts, so `medianTopReviews` of zero does not verify that the apps have no reviews. The [Google Play guide](google-play-aso-keyword-research.md) explains the fields and limits. This [ASO Actor](https://apify.com/changeable_peddler/app-store-aso-opportunity-finder) does not cover Apple's App Store.
+
+## Local Review Complaint Miner
+
+The [historical review output](../examples/live/local-review-complaint-miner.json) is a saved lowest-rating sample, not a current assessment of the business or a population-wide complaint rate. Read the [review-triage guide](reputation-risk-google-reviews-api.md) before using the score. [Local Review Complaint Miner](https://apify.com/changeable_peddler/local-review-complaint-miner) uses simple rating and word rules, so human review remains necessary.
 
 ## Export pattern
 
-After a run finishes, export the default dataset as JSON, CSV, or Excel from Apify. For most reporting workflows, start with:
+After a run finishes, inspect `status` before exporting the dataset as JSON, CSV or Excel from Apify. For most of these Actors, start with:
 
 - `input`
 - `status`
@@ -262,4 +263,4 @@ After a run finishes, export the default dataset as JSON, CSV, or Excel from Api
 - `metrics`
 - `highlights`
 
-Then add `items` only when a writer, analyst, or client needs the supporting evidence.
+Keep `items` or the appropriate source arrays when a decision needs supporting evidence. For AI SERP, map `keyword`, `visibilityScore`, `opportunityScore`, `targetPresence`, `competitorPresence`, `aiOverview` and `topOrganicResults` instead. All schemas require checking the timestamp and source context before a later comparison.
