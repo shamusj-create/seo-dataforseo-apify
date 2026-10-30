@@ -50,3 +50,5 @@ Prefer the Console? Open a ready-to-edit [keyword example](https://apify.com/cha
 - For paid media, ecommerce or app research, [choose between ad inventory, Shopping prices and Google Play results](docs/ppc-shopping-aso-research-workflow.md). These answer different questions and need not run together.
 
 Most reports share `status`, `summary` and a `checkedAt` timestamp. Inspect `metrics` and the supporting `highlights` or `items` before acting on a score. These scores organise further research without establishing profit, organic ranking difficulty, app demand or ad effectiveness.
+
+Need evidence from a company's own website? The separate [website evidence check selector](https://github.com/shamusj-create/security-risk-intelligence-apify/blob/main/docs/website-evidence-checks.md) covers pricing-page text, career-page hiring signals, newsroom contacts, policy clauses, trust-centre claims and public technical resources. It links to the relevant Actor and explains the limits and fees of each check.
