@@ -45,7 +45,7 @@ Prefer the Console? Open a ready-to-edit [keyword example](https://apify.com/cha
 ## Connect the result to your workflow
 
 - For bulk keyword lists, [import the n8n keyword-to-CSV workflow](docs/keyword-volume-cpc-n8n.md). It has Google Sheets field mapping, one manual trigger, a $0.26 run cap and no automatic retries.
-- To use keyword research or ad inventory from an AI client, follow the [MCP setup guide](docs/keyword-and-ad-inventory-mcp.md).
+- To use these Actors from Claude, ChatGPT or another AI assistant, see the [AI chat setup and task catalog](docs/use-apify-actors-in-ai-chat.md). The [keyword and ad inventory guide](docs/keyword-and-ad-inventory-mcp.md) includes dedicated examples.
 - For content work, [choose a keyword, brief or visibility check](docs/seo-ai-visibility-workflow-with-apify.md) according to the decision you need to make.
 - For paid media, ecommerce or app research, [choose between ad inventory, Shopping prices and Google Play results](docs/ppc-shopping-aso-research-workflow.md). These answer different questions and need not run together.
 

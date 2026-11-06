@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "publisher": "changeable_peddler",
+  "previewMcpUrl": "https://mcp.apify.com/?tools=search-actors,fetch-actor-details",
+  "authenticatedMcpUrl": "https://mcp.apify.com/?tools=search-actors,fetch-actor-details,call-actor,get-actor-run,get-dataset-items",
+  "pricingPolicy": "Check the selected Actor's live pricing and requested units before quoting a cost. Obtain explicit customer approval for one capped start. The search and ads Actors require a paid Apify plan for live DataForSEO results.",
+  "actors": [
+    {
+      "actor": "changeable_peddler/keyword-roi-scorer",
+      "category": "Search and ads",
+      "request": "Get Google search volume and CPC for my existing keyword list",
+      "inputFieldsToReview": [
+        "keywords",
+        "marketPreset"
+      ],
+      "result": "Keyword metrics and a research priority score",
+      "boundary": "Supply the terms and market. The batch can contain up to 1,000 terms. The score is a sorting aid.",
+      "liveDataRequiresPaidApifyPlan": true,
+      "storeUrl": "https://apify.com/changeable_peddler/keyword-roi-scorer",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/keyword-roi-scorer.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/keyword-roi-scorer/pricing"
+    },
+    {
+      "actor": "changeable_peddler/ppc-ad-creative-monitor",
+      "category": "Search and ads",
+      "request": "Show available competitor Google ads and creative links for this advertiser domain",
+      "inputFieldsToReview": [
+        "targetDomains",
+        "marketPreset",
+        "depth"
+      ],
+      "result": "Up to 40 available creatives per advertiser, with source or preview links and available dates",
+      "boundary": "Use one advertiser for a first run. Creative labels may identify the advertiser. Open the creative to read its copy.",
+      "liveDataRequiresPaidApifyPlan": true,
+      "storeUrl": "https://apify.com/changeable_peddler/ppc-ad-creative-monitor",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/ppc-ad-creative-monitor.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/ppc-ad-creative-monitor/pricing"
+    },
+    {
+      "actor": "changeable_peddler/serp-content-brief-generator",
+      "category": "Search and ads",
+      "request": "Prepare a content brief from Google ranking pages and People Also Ask",
+      "inputFieldsToReview": [
+        "keywords",
+        "locationCode",
+        "languageCode"
+      ],
+      "result": "One brief per keyword with returned source and topic signals",
+      "boundary": "Choose a market and one query first. Use the sources to write the brief in context.",
+      "liveDataRequiresPaidApifyPlan": true,
+      "storeUrl": "https://apify.com/changeable_peddler/serp-content-brief-generator",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/serp-content-brief-generator.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/serp-content-brief-generator/pricing"
+    },
+    {
+      "actor": "changeable_peddler/ai-serp-visibility-monitor",
+      "category": "Search and ads",
+      "request": "Check which target and competitor domains appear in a Google result and its AI Overview",
+      "inputFieldsToReview": [
+        "keywords",
+        "targetDomains",
+        "competitorDomains",
+        "locationCode"
+      ],
+      "result": "Search visibility and available AI Overview evidence for the requested market and device",
+      "boundary": "Compare snapshots collected for matching markets and devices.",
+      "liveDataRequiresPaidApifyPlan": true,
+      "storeUrl": "https://apify.com/changeable_peddler/ai-serp-visibility-monitor",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/ai-serp-visibility-monitor.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/ai-serp-visibility-monitor/pricing"
+    },
+    {
+      "actor": "changeable_peddler/llm-brand-mentions-monitor",
+      "category": "Search and ads",
+      "request": "Check whether a brand appears in AI search mentions and citations for a topic",
+      "inputFieldsToReview": [
+        "brandName",
+        "targetDomain",
+        "topics",
+        "platforms"
+      ],
+      "result": "Reported brand mentions and citation sources by topic and platform",
+      "boundary": "Select one topic and platform first. The result describes the provider's retrieved sample.",
+      "liveDataRequiresPaidApifyPlan": true,
+      "storeUrl": "https://apify.com/changeable_peddler/llm-brand-mentions-monitor",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/llm-brand-mentions-monitor.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/llm-brand-mentions-monitor/pricing"
+    },
+    {
+      "actor": "changeable_peddler/backlink-gap-audit-report",
+      "category": "Search and ads",
+      "request": "Find referring domains competitors have that are missing for my target domain",
+      "inputFieldsToReview": [
+        "targetDomain",
+        "competitorDomains",
+        "limit"
+      ],
+      "result": "A bounded referring-domain gap report with supporting evidence",
+      "boundary": "Use gaps as review candidates. Check important links at their sources.",
+      "liveDataRequiresPaidApifyPlan": true,
+      "storeUrl": "https://apify.com/changeable_peddler/backlink-gap-audit-report",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/backlink-gap-audit-report.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/backlink-gap-audit-report/pricing"
+    },
+    {
+      "actor": "changeable_peddler/shopping-price-gap-finder",
+      "category": "Search and ads",
+      "request": "Compare returned Google Shopping offers for a product query",
+      "inputFieldsToReview": [
+        "productQueries",
+        "locationCode",
+        "depth"
+      ],
+      "result": "Offer prices and source links for the sampled query and market",
+      "boundary": "Verify variants, shipping and current seller prices before acting.",
+      "liveDataRequiresPaidApifyPlan": true,
+      "storeUrl": "https://apify.com/changeable_peddler/shopping-price-gap-finder",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/shopping-price-gap-finder.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/shopping-price-gap-finder/pricing"
+    },
+    {
+      "actor": "changeable_peddler/app-store-aso-opportunity-finder",
+      "category": "Search and ads",
+      "request": "Show the Google Play apps ranking for a keyword in my market",
+      "inputFieldsToReview": [
+        "appKeywords",
+        "locationCode",
+        "languageCode"
+      ],
+      "result": "A sample of Google Play rankings and an opportunity assessment",
+      "boundary": "Use the ranking sample as an input to market research.",
+      "liveDataRequiresPaidApifyPlan": true,
+      "storeUrl": "https://apify.com/changeable_peddler/app-store-aso-opportunity-finder",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/app-store-aso-opportunity-finder.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/app-store-aso-opportunity-finder/pricing"
+    },
+    {
+      "actor": "changeable_peddler/local-review-complaint-miner",
+      "category": "Search and ads",
+      "request": "Find common complaints in Google reviews for a particular branch",
+      "inputFieldsToReview": [
+        "businesses",
+        "locationCode",
+        "sortBy",
+        "depth"
+      ],
+      "result": "Complaint themes from up to ten reviews and available branch identifiers",
+      "boundary": "Use a precise name and city, Place ID, or CID. Verify the branch and interpret the selected sample in context.",
+      "liveDataRequiresPaidApifyPlan": true,
+      "storeUrl": "https://apify.com/changeable_peddler/local-review-complaint-miner",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/local-review-complaint-miner.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/local-review-complaint-miner/pricing"
+    },
+    {
+      "actor": "changeable_peddler/trust-center-compliance-extractor",
+      "category": "Website evidence",
+      "request": "Find public SOC 2, ISO 27001, DPA and subprocessor references for a vendor",
+      "inputFieldsToReview": [
+        "startUrls",
+        "maxPagesPerSite",
+        "includeEvidence"
+      ],
+      "result": "Public trust and compliance claims with supporting links and snippets",
+      "boundary": "Start at the vendor's trust page. Check scope, dates and original evidence before making a compliance decision.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/trust-center-compliance-extractor",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/trust-center-compliance-extractor.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/trust-center-compliance-extractor/pricing"
+    },
+    {
+      "actor": "changeable_peddler/privacy-policy-risk-scanner",
+      "category": "Website evidence",
+      "request": "Find the passages about retention, deletion and transfers in this privacy policy",
+      "inputFieldsToReview": [
+        "startUrls",
+        "maxPagesPerSite",
+        "includeEvidence"
+      ],
+      "result": "Public policy snippets and source links for human review",
+      "boundary": "Start at the relevant policy. Use qualified review for legal conclusions.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/privacy-policy-risk-scanner",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/privacy-policy-risk-scanner.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/privacy-policy-risk-scanner/pricing"
+    },
+    {
+      "actor": "changeable_peddler/terms-risk-clause-extractor",
+      "category": "Website evidence",
+      "request": "Find where these website terms mention auto-renewal, refunds or arbitration",
+      "inputFieldsToReview": [
+        "startUrls",
+        "maxPagesPerSite",
+        "includeEvidence"
+      ],
+      "result": "Bounded topic snippets and links to the terms",
+      "boundary": "Read the full terms around each match before relying on it.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/terms-risk-clause-extractor",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/terms-risk-clause-extractor.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/terms-risk-clause-extractor/pricing"
+    },
+    {
+      "actor": "changeable_peddler/eu-legal-entity-extractor",
+      "category": "Website evidence",
+      "request": "Find the company name, VAT number or registry ID on this EU company's website",
+      "inputFieldsToReview": [
+        "startUrls",
+        "maxPagesPerSite",
+        "validateVat"
+      ],
+      "result": "Published identifiers, source evidence and optional VAT checks",
+      "boundary": "Start at the legal notice or imprint. A failed or unavailable VAT check is inconclusive.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/eu-legal-entity-extractor",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/eu-legal-entity-extractor.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/eu-legal-entity-extractor/pricing"
+    },
+    {
+      "actor": "changeable_peddler/cookie-consent-tracker-scanner",
+      "category": "Website evidence",
+      "request": "Find cookie banner tools and analytics or advertising tracker references on a site",
+      "inputFieldsToReview": [
+        "startUrls",
+        "maxPagesPerSite",
+        "includeEvidence"
+      ],
+      "result": "Consent-tool and tracker signals in static HTML and headers",
+      "boundary": "Use a browser audit to see which scripts actually fire before or after consent.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/cookie-consent-tracker-scanner",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/cookie-consent-tracker-scanner.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/cookie-consent-tracker-scanner/pricing"
+    },
+    {
+      "actor": "changeable_peddler/ai-crawler-policy-scanner",
+      "category": "Website evidence",
+      "request": "Check robots.txt directives for AI crawlers and whether a site publishes llms.txt",
+      "inputFieldsToReview": [
+        "startUrls",
+        "maxPagesPerSite",
+        "includeEvidence"
+      ],
+      "result": "Published AI crawler directives and policy files",
+      "boundary": "Inspect the original rule and the relevant bot. Published text describes the site's policy.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/ai-crawler-policy-scanner",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/ai-crawler-policy-scanner.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/ai-crawler-policy-scanner/pricing"
+    },
+    {
+      "actor": "changeable_peddler/api-docs-openapi-discovery",
+      "category": "Website evidence",
+      "request": "Find this service's public API docs and OpenAPI-like links",
+      "inputFieldsToReview": [
+        "startUrls",
+        "maxPagesPerSite",
+        "includeEvidence"
+      ],
+      "result": "Candidate API references and spec links with source pages",
+      "boundary": "Verify access and the actual API contract before integrating.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/api-docs-openapi-discovery",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/api-docs-openapi-discovery.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/api-docs-openapi-discovery/pricing"
+    },
+    {
+      "actor": "changeable_peddler/security-txt-vdp-checker",
+      "category": "Website evidence",
+      "request": "Find a site's security.txt contact, expiry and vulnerability disclosure policy",
+      "inputFieldsToReview": [
+        "startUrls",
+        "maxPagesPerSite",
+        "includeEvidence"
+      ],
+      "result": "Disclosed contacts, expiry and policy links where present",
+      "boundary": "Read the published policy before any testing. The report gathers evidence for that review.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/security-txt-vdp-checker",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/security-txt-vdp-checker.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/security-txt-vdp-checker/pricing"
+    },
+    {
+      "actor": "changeable_peddler/saas-pricing-page-extractor",
+      "category": "Website evidence",
+      "request": "Collect public SaaS prices and trial or enterprise-plan text for a comparison",
+      "inputFieldsToReview": [
+        "startUrls",
+        "maxPagesPerSite",
+        "includeEvidence"
+      ],
+      "result": "Public price strings and relevant plan text",
+      "boundary": "Start at the pricing page and verify plan-to-price mappings manually.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/saas-pricing-page-extractor",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/saas-pricing-page-extractor.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/saas-pricing-page-extractor/pricing"
+    },
+    {
+      "actor": "changeable_peddler/career-page-hiring-signal-extractor",
+      "category": "Website evidence",
+      "request": "Find role links and hiring signals on a company's careers page",
+      "inputFieldsToReview": [
+        "startUrls",
+        "maxPagesPerSite",
+        "includeEvidence"
+      ],
+      "result": "Role-like links and hiring mentions with source URLs",
+      "boundary": "Check each linked vacancy for availability, location and status.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/career-page-hiring-signal-extractor",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/career-page-hiring-signal-extractor.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/career-page-hiring-signal-extractor/pricing"
+    },
+    {
+      "actor": "changeable_peddler/press-newsroom-contact-extractor",
+      "category": "Website evidence",
+      "request": "Find public newsroom links, media kits and published press contacts",
+      "inputFieldsToReview": [
+        "startUrls",
+        "maxPagesPerSite",
+        "includeEvidence"
+      ],
+      "result": "Source links and public contact strings",
+      "boundary": "Use a newsroom URL. Verify that any contact is current and intended for the task.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/press-newsroom-contact-extractor",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/press-newsroom-contact-extractor.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/press-newsroom-contact-extractor/pricing"
+    },
+    {
+      "actor": "changeable_peddler/oss-supply-chain-risk-report",
+      "category": "Company and public records",
+      "request": "Triage risks for a pinned npm or Python dependency",
+      "inputFieldsToReview": [
+        "pypiPackageVersions",
+        "packageLockJson",
+        "sbomJson",
+        "includeNvdKeywordSearch"
+      ],
+      "result": "Per-component risk report with source evidence",
+      "boundary": "Start with one component and its exact version. Each component may be billed separately. Verify applicability before remediation.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/oss-supply-chain-risk-report",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/oss-supply-chain-risk-report.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/oss-supply-chain-risk-report/pricing"
+    },
+    {
+      "actor": "changeable_peddler/sec-red-flag-monitor",
+      "category": "Company and public records",
+      "request": "Find recent SEC filings worth reviewing for a ticker or CIK",
+      "inputFieldsToReview": [
+        "tickersOrCiks",
+        "secContactEmail",
+        "lookbackDays"
+      ],
+      "result": "Filing signals, references and company disambiguation",
+      "boundary": "Use a real contact address supplied privately through an authorized input path for SEC requests. Read the filings before drawing conclusions.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/sec-red-flag-monitor",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/sec-red-flag-monitor.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/sec-red-flag-monitor/pricing"
+    },
+    {
+      "actor": "changeable_peddler/startup-funding-signal-report",
+      "category": "Company and public records",
+      "request": "Find possible Form D filings and public development signals for a startup",
+      "inputFieldsToReview": [
+        "companies",
+        "secContactEmail",
+        "maxSecFilings"
+      ],
+      "result": "Possible issuer matches, filing evidence and optional development signals",
+      "boundary": "Use a real authorized SEC contact. Verify the issuer, amendments and offering context before interpreting amounts.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/startup-funding-signal-report",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/startup-funding-signal-report.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/startup-funding-signal-report/pricing"
+    },
+    {
+      "actor": "changeable_peddler/cqc-report-finder",
+      "category": "Company and public records",
+      "request": "Find CQC inspection report links and dates for this English care location",
+      "inputFieldsToReview": [
+        "mode",
+        "locationIds",
+        "maxLocationsToCheck",
+        "maxProviders"
+      ],
+      "result": "Provider-grouped report links and inspection metadata",
+      "boundary": "Prefer one public location ID for the first lookup. Read the source reports for any care decision.",
+      "liveDataRequiresPaidApifyPlan": false,
+      "storeUrl": "https://apify.com/changeable_peddler/cqc-report-finder",
+      "agentDocumentationUrl": "https://apify.com/changeable_peddler/cqc-report-finder.md",
+      "pricingUrl": "https://apify.com/changeable_peddler/cqc-report-finder/pricing"
+    }
+  ]
+}

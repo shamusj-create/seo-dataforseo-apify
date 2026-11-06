@@ -2,25 +2,17 @@
 
 If your existing AI workflow needs Google keyword volume/CPC or a Google Ads Transparency inventory, you can expose either Actor through Apify's hosted MCP server. This uses the published Actors and their existing prices; it does not require a separate server or DataForSEO credentials.
 
+For other research tasks and the capped `call-actor` workflow, see the [AI chat setup and task catalog](use-apify-actors-in-ai-chat.md).
+
 ## Choose the tool
 
-Use one of these server URLs in an MCP client that supports remote Streamable HTTP:
+Use the Streamable HTTP server URL below to check current pricing and inputs, then start one approved run with a limit.
 
-- Keyword volume/CPC: `https://mcp.apify.com?tools=changeable_peddler/keyword-roi-scorer`
-- Advertiser creative inventory: `https://mcp.apify.com?tools=changeable_peddler/ppc-ad-creative-monitor`
-- Both: `https://mcp.apify.com?tools=changeable_peddler/keyword-roi-scorer,changeable_peddler/ppc-ad-creative-monitor`
-
-A generic client configuration is:
-
-```json
-{
-  "mcpServers": {
-    "keyword-research": {
-      "url": "https://mcp.apify.com?tools=changeable_peddler/keyword-roi-scorer"
-    }
-  }
-}
+```text
+https://mcp.apify.com/?tools=search-actors,fetch-actor-details,call-actor,get-actor-run,get-dataset-items
 ```
+
+Choose `changeable_peddler/keyword-roi-scorer` for supplied keyword lists or `changeable_peddler/ppc-ad-creative-monitor` for one advertiser's Google Ads Transparency snapshot. Ask the assistant to use `fetch-actor-details` for that exact name.
 
 Sign in to Apify through the hosted server's OAuth flow when prompted, or use an Apify API token in your client's credential settings. Never paste a token into a public prompt or repository. Client configuration formats differ; use [Apify's official configuration guide](https://docs.apify.com/integrations/mcp) for your client. Confirm that the tool appears before asking the agent to run it.
 
@@ -32,9 +24,25 @@ Start with a bounded instruction such as:
 
 > I am comparing an existing client keyword list for the US English market. First show the Actor input and applicable charge, then ask me before running one batch. Use keyword-roi-scorer with locationCode 2840, languageCode en, and these keywords: technical seo audit tool; rank tracking software; seo api. After the run, return keyword, search volume, CPC, advertiser competition, and research priority score. Keep missing data visible. Treat the score as a research sorting heuristic; check relevance and organic SERP difficulty separately.
 
-The confirmation in this example is a way to control your own agent's spending. Client prompts are not a substitute for an Apify run spending limit. The report event is charged before the provider request, so a provider error or unavailable data may follow a charge.
+After approval, send the user's positive USD maximum in `callOptions.maxTotalChargeUsd` on `call-actor`. Set the approved limit in Apify Console if the client cannot pass the option. The report event is charged before the provider request, so a provider error or unavailable data may follow a charge.
 
 The Actor evaluates supplied keywords; it does not generate keyword ideas, calculate organic difficulty, or forecast financial ROI. See the [keyword planning guide](keyword-volume-cpc-client-prioritization.md) and [historical controlled output](../examples/live/keyword-roi-scorer.json).
+
+The following `call-actor` arguments illustrate an approved $0.26 limit for the keyword example. The Actor charges the same $0.25 report fee for one term or a batch, so choose the actual list before requesting approval.
+
+```json
+{
+  "actor": "changeable_peddler/keyword-roi-scorer",
+  "input": {
+    "keywords": ["technical seo audit tool", "rank tracking software", "seo api"],
+    "locationCode": 2840,
+    "languageCode": "en"
+  },
+  "callOptions": { "maxTotalChargeUsd": 0.26 }
+}
+```
+
+Use the returned run ID and dataset ID to read the result. Check the existing run before approving another start.
 
 ## Competitor creative-review prompt
 
@@ -44,6 +52,6 @@ This Actor returns a snapshot, not verified ad-copy extraction, run-to-run compa
 
 ## Discovery and verification
 
-Apify's hosted MCP server supports Actor search and structured result schemas. Its official documentation describes tool selection and eligibility; full-permission and rental Actors are excluded. This guide's configuration and field mapping were checked against the official documentation and current Actor definitions. It has not been executed as a paid MCP run, and it is not a promise that every client can run the Actors without setup.
+Apify's hosted MCP server supports Actor search and structured result schemas. Its official documentation describes tool selection and eligibility; full-permission and rental Actors are excluded. Both exact names were checked using Apify's live metadata lookup. For tool selection, OAuth and the charge-limit option, see [Apify MCP](https://docs.apify.com/mcp).
 
 Sources: [Apify MCP server](https://docs.apify.com/integrations/mcp), [keyword Actor](https://apify.com/changeable_peddler/keyword-roi-scorer), [PPC Actor](https://apify.com/changeable_peddler/ppc-ad-creative-monitor).
