@@ -28,17 +28,17 @@ For a spreadsheet preview, download the [historical keyword CSV](examples/keywor
 
 ## Run one example
 
-Review the input file for the Actor you selected, including its market and number of queries. A five-keyword batch still costs the flat $0.25 report fee, while the other Actors use the units in the table above.
+Review the input file for the Actor you selected, including its market and number of queries. The three-keyword example still costs the flat $0.25 report fee, while the other Actors use the units in the table above.
 
 ```bash
 npm install
 npm run run-suite -- --list
-APIFY_TOKEN=your_token_here npm run run-suite -- --actor keyword-roi-scorer
+npm run run-suite -- --actor keyword-roi-scorer --preview
+# With APIFY_TOKEN set privately:
+npm run run-suite -- --actor keyword-roi-scorer
 ```
 
-The list command does not start an Actor. The selected run command calls only the named Actor and prints a sample of its dataset. Store the token privately and do not commit it to this repository.
-
-**Always include `--actor`.** Omitting it runs all nine examples and can charge for each. The [example runner](examples/run-suite.js) does not set a per-run spending cap; use the Actor in Apify Console when you want to set an explicit maximum before execution. Each Actor is purchased separately, and these guides do not create schedules or send messages.
+Listing and previewing work without a token and start nothing. The preview shows the example file and its Apify run charge limit (for example, $0.26 for the keyword template). Review current pricing, including any separate platform usage. To choose a different run limit, pass `--max-usd` with a positive amount. The [runner](examples/run-suite.js) starts only the selected Actor and shows its run ID and up to three output rows. Keep your token private.
 
 Prefer the Console? Open a ready-to-edit [keyword example](https://apify.com/changeable_peddler/keyword-roi-scorer/examples/keyword-roi-scoring) or [advertiser example](https://apify.com/changeable_peddler/ppc-ad-creative-monitor/examples/ppc-creative-monitor) and review its input and Pricing tab before execution.
 
